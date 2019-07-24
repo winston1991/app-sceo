@@ -1,0 +1,135 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:background="@color/background_color" >
+    
+    <com.huntkey.software.sceo.widget.BackTitle
+        android:id="@+id/find_pwd_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"/>
+
+	<RelativeLayout
+		android:id="@+id/find_pwd_layout1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/find_pwd_title"
+		android:layout_marginLeft="@dimen/margin_16"
+		android:layout_marginTop="23dp"
+		android:layout_marginRight="@dimen/margin_16"
+		android:background="@drawable/border_corners">
+
+		<TextView
+			android:id="@+id/find_pwd_account_tv"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="@dimen/margin_10"
+			android:text="工    号"
+			android:textColor="@color/text_color_normal"
+			android:textSize="@dimen/margin_16" />
+
+		<!--         <com.huntkey.software.sceo.widget.ClearEditText
+	        android:id="@+id/find_pwd_account"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:padding="@dimen/margin_10"
+	        android:layout_toRightOf="@+id/find_pwd_account_tv"
+	        android:background="@null"
+	        android:hint="请输入您的工号"
+	        android:singleLine="true"
+	        android:textColor="@color/text_color_weak"
+	        android:textSize="@dimen/textsize_16"/> -->
+
+		<TextView
+			android:id="@+id/find_pwd_account"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_toRightOf="@+id/find_pwd_account_tv"
+			android:padding="@dimen/margin_10"
+			android:singleLine="true"
+			android:textColor="@color/text_color_normal"
+			android:textSize="@dimen/textsize_16" />
+
+		<View
+			android:id="@+id/find_pwd_line1"
+			style="@style/devide_line_horizontal"
+			android:layout_below="@+id/find_pwd_account_tv" />
+
+		<TextView
+			android:id="@+id/find_pwd_phone_tv"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/find_pwd_line1"
+			android:padding="@dimen/margin_10"
+			android:text="手机号"
+			android:textColor="@color/text_color_normal"
+			android:textSize="@dimen/margin_16" />
+
+		<TextView
+			android:id="@+id/find_pwd_phone"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/find_pwd_line1"
+			android:layout_toRightOf="@+id/find_pwd_phone_tv"
+			android:padding="@dimen/margin_10"
+			android:text=""
+			android:textColor="@color/text_color_normal"
+			android:textSize="@dimen/margin_16" />
+
+		<Button
+			android:id="@+id/find_pwd_check_button"
+			android:layout_width="@dimen/margin_120"
+			android:layout_height="@dimen/margin_40"
+			android:layout_below="@+id/find_pwd_line1"
+			android:layout_alignParentRight="true"
+			android:padding="@dimen/margin_10"
+			android:text="获取验证码"
+			android:textColor="@color/text_color_normal"
+			android:textSize="@dimen/margin_16" />
+
+		<View
+			android:id="@+id/find_pwd_line2"
+			style="@style/devide_line_horizontal"
+			android:layout_below="@+id/find_pwd_phone_tv" />
+
+		<TextView
+			android:id="@+id/find_pwd_check_tv"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/find_pwd_line2"
+			android:padding="@dimen/margin_10"
+			android:text="验证码"
+			android:textColor="@color/text_color_normal"
+			android:textSize="@dimen/margin_16" />
+
+		<com.huntkey.software.sceo.widget.ClearEditText
+			android:id="@+id/find_pwd_check"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/find_pwd_line2"
+			android:layout_toRightOf="@+id/find_pwd_check_tv"
+			android:background="@null"
+			android:hint="请输入验证码"
+			android:padding="@dimen/margin_10"
+			android:singleLine="true"
+			android:textColor="@color/text_color_normal"
+			android:textSize="@dimen/textsize_16" />
+
+	</RelativeLayout>
+    
+    <Button 
+        android:id="@+id/pwd_find_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_23"
+        android:layout_below="@+id/find_pwd_layout1"
+        android:background="@drawable/login_btn"
+        android:text="下一步"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_18"/>
+
+</RelativeLayout>

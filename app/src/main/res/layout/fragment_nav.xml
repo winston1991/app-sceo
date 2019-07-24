@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+    <com.huntkey.software.sceo.widget.MainTitle_v2
+        android:id="@+id/form_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48" />
+
+    <LinearLayout
+        android:id="@+id/form_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40"
+        android:layout_below="@+id/form_title"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/form_head_tv1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="PPI名称\n(节点)"
+            android:textColor="@color/text_color_normal"
+            android:textSize="@dimen/margin_16" />
+
+        <View
+            android:layout_width="@dimen/margin_0.5"
+            android:layout_height="match_parent"
+            android:background="@color/background_color" />
+
+        <TextView
+            android:id="@+id/form_head_tv2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="日值"
+            android:textColor="@color/text_color_normal"
+            android:textSize="@dimen/margin_16" />
+
+        <View
+            android:layout_width="@dimen/margin_0.5"
+            android:layout_height="match_parent"
+            android:background="@color/background_color"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/form_head_tv2_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="周值"
+            android:textColor="@color/text_color_normal"
+            android:textSize="@dimen/margin_16"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="@dimen/margin_0.5"
+            android:layout_height="match_parent"
+            android:background="@color/background_color" />
+
+        <TextView
+            android:id="@+id/form_head_tv3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="月值"
+            android:textColor="@color/text_color_normal"
+            android:textSize="@dimen/margin_16" />
+
+        <View
+            android:layout_width="@dimen/margin_0.5"
+            android:layout_height="match_parent"
+            android:background="@color/background_color" />
+
+        <TextView
+            android:id="@+id/form_head_tv4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="财年"
+            android:textColor="@color/text_color_normal"
+            android:textSize="@dimen/margin_16" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/form_view1"
+        style="@style/devide_line_horizontal"
+        android:layout_below="@+id/form_layout" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/form_ptrListview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/form_view1"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/background_color"
+        android:dividerHeight="@dimen/margin_0.1"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true"
+        android:smoothScrollbar="true" />
+
+    <com.huntkey.software.sceo.widget.ErrorView
+        android:id="@+id/salelist_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/form_title"
+        android:visibility="gone"
+        app:ev_retryButtonText="@string/error_view_retry"
+        app:ev_retryButtonTextColor="@color/text_color_normal"
+        app:ev_subtitle="@string/error_view_title" />
+
+</RelativeLayout>

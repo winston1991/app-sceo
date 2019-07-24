@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-sceo.iml" filepath="$PROJECT_DIR$/app-sceo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/datetimepicker/datetimepicker.iml" filepath="$PROJECT_DIR$/datetimepicker/datetimepicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/heipermission/heipermission.iml" filepath="$PROJECT_DIR$/heipermission/heipermission.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mpchart/mpchart.iml" filepath="$PROJECT_DIR$/mpchart/mpchart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pulltorefresh/pulltorefresh.iml" filepath="$PROJECT_DIR$/pulltorefresh/pulltorefresh.iml" />
+    </modules>
+  </component>
+</project>

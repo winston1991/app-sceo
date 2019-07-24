@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true">
+
+    <com.huntkey.software.sceo.widget.MainTitle
+	    android:id="@+id/invoice_title"
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/margin_48"/>
+    
+    <com.huntkey.software.sceo.widget.dropmenu.DropDownMenu
+        android:id="@+id/invoice_menu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40"
+        android:layout_below="@+id/invoice_title"
+        android:background="@color/white"/>
+    
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/invoice_xlistView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/invoice_menu"
+        android:divider="@color/background_color"
+        android:dividerHeight="@dimen/margin_5"
+        android:fadingEdge="none"
+        android:cacheColorHint="#00000000"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true"/>
+    
+    <com.huntkey.software.sceo.widget.ErrorView
+        android:id="@+id/invoice_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/invoice_title"
+        app:ev_retryButtonText="@string/error_view_retry"
+        app:ev_retryButtonTextColor="@color/text_color_normal"
+        app:ev_subtitle="@string/error_view_title"/>
+    
+    <include 
+        android:id="@+id/invoice_load"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/invoice_menu"
+        layout="@layout/view_loading"
+        android:visibility="gone"/>
+    
+</RelativeLayout>

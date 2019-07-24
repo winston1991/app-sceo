@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#1B7CE2</color>
+    <color name="colorPrimaryDark">#0053ab</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- 白色 -->
+    <color name="white">#ffffff</color>
+    
+    <!-- 黑色 -->
+    <color name="black">#000000</color>
+    
+    <!-- 灰色 -->
+    <color name="gray">#EBEBEB</color>
+    
+    <!-- 分割线颜色 -->
+    <color name="devide_line">#D6D6D6</color>
+    
+    <!-- title上的竖分割线颜色  深-->
+    <color name="title_devide_line">#0053ab</color>
+    
+    <!-- title上的竖分割线颜色  浅-->
+    <color name="title_devide_line_weak">#449fff</color>
+    
+    <!-- 透明颜色 -->
+    <color name="transparent">#00000000</color>
+    
+    <!-- 半透明颜色 -->
+    <color name="subtransparent">#e0000000</color>
+    
+    <!-- 背景色 -->
+    <color name="background_color">#E7E7E7</color>
+
+    <color name="popup_bg">#8f000000</color>
+    
+    <color name="avatar_background_color">#E3E3E3</color>
+    
+    <!-- 登录按钮normal状态下颜色 -->
+    <color name="login_btn_normal">#449FFF</color>
+    
+    <!-- 登录按钮click状态下颜色  暂时用标题栏的背景色-->
+    <color name="login_btn_click">#1B7CE2</color>
+    
+    <!-- 发送按钮normal状态下颜色 -->
+    <color name="send_btn_normal">#D5D5D5</color>
+    
+    <!-- 发送按钮click状态下颜色 -->
+    <color name="send_btn_click">#C1C1C1</color>
+    
+    <!-- 标题栏背景色 -->
+    <color name="title_color">#1B7CE2</color>
+    
+    <!-- 黑色字体 -->
+    <color name="text_color_black">#000000</color>
+    
+    <!-- normal字体 -->
+    <color name="text_color_normal">#333333</color>
+    
+    <!-- 灰色字体 -->
+    <color name="text_color_weak">#a0a0a0</color>
+    
+    <!-- 深灰色字体 -->
+    <color name="text_color_deep_weak">#949494</color>
+    
+    <!-- 黄色字体 -->
+    <color name="text_color_yellow">#FFEC1F</color>
+    
+    <!-- 待办事务中的字体颜色 -->
+    <color name="text_color_business">#141414</color>
+    
+    <!-- 底部tabbar字体点击状态下的颜色 -->
+    <color name="text_color_blue">#449fff</color>
+    
+    <!-- 待办事务中时间显示的底色 -->
+    <color name="back_color_business">#d1d1d1</color>
+    
+    <!-- 删除并退出btn normal状态下的颜色 -->
+    <color name="exit_btn_normal">#FF2E1F</color>
+    
+    <!-- 删除并退出btn click状态下的颜色 (暂用色)-->
+    <color name="exit_btn_click">#CD2424</color>
+    
+    <!-- 底部导航条背景色 -->
+    <color name="foot_navigation_background">#f9f9f9</color>
+    
+    <!-- 确定按钮normal -->
+    <color name="text_confirm_normal">#f0fff001</color>
+
+    <color name="main_bottom_tab_textcolor_normal">#666666</color>
+    <color name="main_bottom_tab_textcolor_selected">#1B7CE2</color>
+    
+    <!-- 绿色按钮normal -->
+    <color name="btn_green_normal">#43BF23</color>
+    <!-- 绿色按钮click -->
+    <color name="btn_green_click">#2da602</color>
+    
+    <!-- 红色按钮normal -->
+    <color name="btn_red_normal">#FF3F3E</color>
+    <!-- 红色按钮click -->
+    <color name="btn_red_click">#d90202</color>
+    
+    <!-- 手势连线 -蓝-->
+    <color name="gesture_blue">#581B7CE2</color>
+    <!-- 手势连线 -红-->
+    <color name="gesture_red">#58FF3F3E</color>
+    
+    <!-- 报表曲线图颜色 -->
+    <color name="form_blue">#1f3fff</color>
+    <color name="form_red">#ff2e1f</color>
+    <color name="form_orange">#04c1d7</color>
+    <color name="form_gree">#fc04ff</color>
+    
+    <!-- lightblue -->
+    <color name="light_blue">#EEF6FC</color>
+    <color name="deep_blue">#D8E5F2</color>
+    
+    <!-- sweetAlertDialog -->
+    <color name="success_stroke_color">#20BCA6</color>
+    <color name="float_transparent">#66000000</color>
+    <color name="error_stroke_color">#F27474</color>
+    <color name="gray_btn_bg_color">#D0D0D0</color>
+    <color name="gray_btn_bg_pressed_color">#B6B6B6</color>
+    <color name="trans_success_stroke_color">#33A5DC86</color>
+    <color name="warning_stroke_color">#F8BB86</color>
+    <color name="actionbar_color">#019587</color>
+    <color name="red_btn_bg_color">#DD6B55</color>
+    <color name="red_btn_bg_pressed_color">#CD5B55</color>
+    
+    <color name="error_view_text">#656565</color>
+    <color name="error_view_text_dark">#CC000000</color>
+    <color name="error_view_text_light">#858585</color>
+
+    <color name="error_view_retry_button_background">#30000000</color>
+    <color name="error_view_retry_button_background_stroke">#50000000</color>
+    
+    <color name="default_menu_back">#f1f1f1</color>
+    <color name="default_menu_press_back">#fafafa</color>
+    <color name="default_menu_text">#00cf9b</color>
+    <color name="divider">#f1f1f1</color>
+    
+    <color name="point_selector">#888</color>
+    
+</resources>

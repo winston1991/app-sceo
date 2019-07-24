@@ -1,0 +1,476 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true" >
+
+    <com.huntkey.software.sceo.widget.BackTitle
+        android:id="@+id/business_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"/>
+    
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/business_title"
+        android:scrollbars="none">
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            
+            <RelativeLayout 
+		        android:id="@+id/business_vehicle_layout"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="@dimen/margin_10"
+		        android:paddingBottom="@dimen/margin_10"
+		        android:paddingLeft="@dimen/margin_16"
+		        android:paddingRight="@dimen/margin_16"
+		        android:background="@drawable/bg_selector_w2g">
+		        
+		        <TextView 
+		        	android:id="@+id/business_vehicle_tv1"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:textSize="@dimen/margin_16"
+		        	android:textColor="@color/text_color_weak"
+		        	android:text="交 通 工 具 ："/>
+		     
+		     	<TextView 
+		        	android:id="@+id/business_vehicle_tv"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:layout_toRightOf="@+id/business_vehicle_tv1"
+		        	android:layout_marginLeft="@dimen/margin_23"
+		        	android:textSize="@dimen/margin_16"
+		        	android:textColor="@color/text_color_normal"
+		        	android:text="汽车"/>
+		     
+		     	<ImageView 
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:layout_alignParentRight="true"
+		        	android:layout_centerVertical="true"
+		        	android:src="@drawable/ic_arrow_right"/>
+		        
+		    </RelativeLayout>
+		    
+            <View 
+        		style="@style/devide_line_horizontal"/>
+            
+            <RelativeLayout 
+		        android:id="@+id/business_local_layout"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="@dimen/margin_10"
+		        android:paddingBottom="@dimen/margin_10"
+		        android:paddingLeft="@dimen/margin_16"
+		        android:paddingRight="@dimen/margin_16">
+		        
+		        <TextView 
+		        	android:id="@+id/business_local_tv1"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:textSize="@dimen/margin_16"
+		        	android:textColor="@color/text_color_weak"
+		        	android:text="出 差 地 点 ："/>
+		     
+		     	<EditText 
+		        	android:id="@+id/business_local_et"
+		        	android:layout_width="match_parent"
+		        	android:layout_height="wrap_content"
+		        	android:background="@null"
+		        	android:layout_toRightOf="@+id/business_local_tv1"
+		        	android:layout_marginLeft="@dimen/margin_23"
+		        	android:textColorHint="@color/text_color_weak"
+		        	android:hint="请输入出差地点"
+		        	android:textSize="@dimen/margin_16"
+		        	android:textColor="@color/text_color_normal"
+		        	android:text=""/>
+		     
+		    </RelativeLayout>
+		    
+            <View 
+        		style="@style/devide_line_horizontal"/>
+            
+            <RelativeLayout 
+		        android:id="@+id/business_num_layout"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="@dimen/margin_10"
+		        android:paddingBottom="@dimen/margin_10"
+		        android:paddingLeft="@dimen/margin_16"
+		        android:paddingRight="@dimen/margin_16">
+		        
+		        <TextView 
+		        	android:id="@+id/business_num_tv1"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:textSize="@dimen/margin_16"
+		        	android:textColor="@color/text_color_weak"
+		        	android:text="同 行 人 数 ："/>
+		     
+		     	<EditText 
+		        	android:id="@+id/business_num_et"
+		        	android:layout_width="match_parent"
+		        	android:layout_height="wrap_content"
+		        	android:background="@null"
+		        	android:phoneNumber="true"
+		        	android:layout_toRightOf="@+id/business_num_tv1"
+		        	android:layout_marginLeft="@dimen/margin_23"
+		        	android:textColorHint="@color/text_color_weak"
+		        	android:hint="请输入同行人数"
+		        	android:textSize="@dimen/margin_16"
+		        	android:textColor="@color/text_color_normal"
+		        	android:text=""/>
+		     
+		    </RelativeLayout>
+		    
+            <View 
+        		style="@style/devide_line_horizontal"/>
+            
+            <RelativeLayout 
+		        android:id="@+id/business_travel_charge_layout"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="@dimen/margin_10"
+		        android:paddingBottom="@dimen/margin_10"
+		        android:paddingLeft="@dimen/margin_16"
+		        android:paddingRight="@dimen/margin_16">
+		        
+		        <TextView 
+		        	android:id="@+id/business_travel_charge_tv1"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:textSize="@dimen/margin_16"
+		        	android:textColor="@color/text_color_weak"
+		        	android:text="预计差旅费："/>
+		     
+		     	<EditText 
+		        	android:id="@+id/business_travel_charge_et"
+		        	android:layout_width="match_parent"
+		        	android:layout_height="wrap_content"
+		        	android:background="@null"
+		        	android:phoneNumber="true"
+		        	android:layout_toRightOf="@+id/business_travel_charge_tv1"
+		        	android:layout_marginLeft="@dimen/margin_23"
+		        	android:textColorHint="@color/text_color_weak"
+		        	android:hint="请输入预计差旅费"
+		        	android:textSize="@dimen/margin_16"
+		        	android:textColor="@color/text_color_normal"
+		        	android:text=""/>
+		     
+		    </RelativeLayout>
+		    
+            <View 
+        		style="@style/devide_line_horizontal"/>
+            
+            <RelativeLayout 
+		        android:id="@+id/business_money_layout"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="@dimen/margin_10"
+		        android:paddingBottom="@dimen/margin_10"
+		        android:paddingLeft="@dimen/margin_16"
+		        android:paddingRight="@dimen/margin_16">
+		        
+		        <TextView 
+		        	android:id="@+id/business_money_tv1"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:textSize="@dimen/margin_16"
+		        	android:textColor="@color/text_color_weak"
+		        	android:text="预计活动费："/>
+		     
+		     	<EditText 
+		        	android:id="@+id/business_money_et"
+		        	android:layout_width="match_parent"
+		        	android:layout_height="wrap_content"
+		        	android:background="@null"
+		        	android:phoneNumber="true"
+		        	android:layout_toRightOf="@+id/business_money_tv1"
+		        	android:layout_marginLeft="@dimen/margin_23"
+		        	android:textColorHint="@color/text_color_weak"
+		        	android:hint="请输入预计活动费"
+		        	android:textSize="@dimen/margin_16"
+		        	android:textColor="@color/text_color_normal"
+		        	android:text=""/>
+		     
+		    </RelativeLayout>
+		    
+            <View 
+        		style="@style/devide_line_horizontal"/>
+            
+            <LinearLayout 
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="@dimen/margin_10"
+		        android:paddingBottom="@dimen/margin_10"
+		        android:paddingLeft="@dimen/margin_16"
+		        android:paddingRight="@dimen/margin_16">
+		     	
+                <RelativeLayout 
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4">
+                    
+                    <RelativeLayout 
+                        android:id="@+id/business_date_start_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_selector_w2g">
+                        
+                        <TextView 
+				            android:id="@+id/business_date_start"
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            android:textSize="@dimen/margin_23"
+				            android:textColor="@color/text_color_blue"
+				            android:text=""/>
+                        
+                    </RelativeLayout>
+                    
+                    <RelativeLayout
+                        android:id="@+id/business_time_start_layout"
+                        android:layout_width="match_parent" 
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:layout_below="@+id/business_date_start_layout"
+                        android:background="@drawable/bg_selector_w2g">
+                        
+                        <TextView 
+				            android:id="@+id/business_time_start"
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            android:textSize="@dimen/margin_16"
+				            android:textColor="@color/text_color_weak"
+				            android:text=""/>
+                        
+                    </RelativeLayout>
+			        
+                </RelativeLayout>
+                
+                <View 
+                    android:layout_width="@dimen/margin_23"
+                    android:layout_height="@dimen/margin_1"
+                    android:layout_gravity="center"
+                    android:background="@color/text_color_weak"/>
+                
+                <RelativeLayout 
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4">
+                    
+                    <RelativeLayout 
+                        android:id="@+id/business_date_end_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_selector_w2g">
+                        
+                        <TextView 
+				            android:id="@+id/business_date_end"
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            android:layout_alignParentRight="true"
+				            android:textSize="@dimen/margin_23"
+				            android:textColor="@color/text_color_blue"
+				            android:text=""/>
+                        
+                    </RelativeLayout>
+                    
+                    <RelativeLayout
+                        android:id="@+id/business_time_end_layout"
+                        android:layout_width="match_parent" 
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:layout_below="@+id/business_date_end_layout"
+                        android:background="@drawable/bg_selector_w2g">
+                        
+                        <TextView 
+				            android:id="@+id/business_time_end"
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            android:layout_alignParentLeft="true"
+				            android:textSize="@dimen/margin_16"
+				            android:textColor="@color/text_color_weak"
+				            android:text=""/>
+                        
+                    </RelativeLayout>
+                    
+                </RelativeLayout>
+		     	
+		    </LinearLayout>
+		    
+            <View 
+        		style="@style/devide_line_horizontal"/>
+            
+            <LinearLayout 
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="@dimen/margin_10"
+		        android:paddingBottom="@dimen/margin_10"
+		        android:paddingLeft="@dimen/margin_16"
+		        android:paddingRight="@dimen/margin_16"
+		        android:background="@color/white"
+		        android:orientation="horizontal">
+		        
+		        <RelativeLayout 
+		            android:id="@+id/business_normal_duration_layout"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="1">
+                    
+		            <TextView 
+		                android:id="@+id/business_normal_duration_tv1"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:textColor="@color/text_color_weak"
+		                android:textSize="@dimen/margin_14"
+		                android:text="正班工时："/>
+		            
+		            <TextView 
+		                android:id="@+id/business_normal_duration_tv"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_toRightOf="@+id/business_normal_duration_tv1"
+		                android:textColor="@color/text_color_blue"
+		                android:textSize="@dimen/margin_14"
+		                android:text="0.0"/>
+		            
+		        </RelativeLayout>
+		        
+		        <RelativeLayout 
+		            android:id="@+id/business_add_duration_layout"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="1">
+                    
+		            <TextView 
+		                android:id="@+id/business_add_duration_tv1"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:textColor="@color/text_color_weak"
+		                android:textSize="@dimen/margin_14"
+		                android:text="加班工时："/>
+		            
+		            <TextView 
+		                android:id="@+id/business_add_duration_tv"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_toRightOf="@+id/business_add_duration_tv1"
+		                android:textColor="@color/text_color_blue"
+		                android:textSize="@dimen/margin_14"
+		                android:text="0.0"/>
+		            
+		        </RelativeLayout>
+		        
+		        <RelativeLayout 
+		            android:id="@+id/business_normal_day_layout"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="1">
+                    
+		            <TextView 
+		                android:id="@+id/business_normal_day_tv1"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:textColor="@color/text_color_weak"
+		                android:textSize="@dimen/margin_14"
+		                android:text="正班天数："/>
+		            
+		            <TextView 
+		                android:id="@+id/business_normal_day_tv"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_toRightOf="@+id/business_normal_day_tv1"
+		                android:textColor="@color/text_color_blue"
+		                android:textSize="@dimen/margin_14"
+		                android:text="0.0"/>
+		            
+		        </RelativeLayout>
+		     
+		    </LinearLayout>
+		    
+            <View 
+        		style="@style/devide_line_horizontal"/>
+            
+            <RelativeLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/margin_10"
+		        android:paddingBottom="@dimen/margin_10"
+		        android:paddingLeft="@dimen/margin_16"
+		        android:paddingRight="@dimen/margin_16"
+		        android:background="@color/white">
+		        
+                <EditText
+                    android:id="@+id/business_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:minHeight="@dimen/margin_160"
+                    android:maxLength="500"
+                    android:textSize="@dimen/margin_16"
+                    android:textColor="@color/text_color_normal"
+                    android:background="@null"
+                    android:textColorHint="@color/text_color_weak"
+                    android:hint="请填写出差目的"/>
+                
+            </RelativeLayout>
+            
+            <View 
+        		style="@style/devide_line_horizontal"/>
+            
+            <RelativeLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/margin_10"
+		        android:paddingBottom="@dimen/margin_10"
+		        android:paddingLeft="@dimen/margin_16"
+		        android:paddingRight="@dimen/margin_16"
+		        android:background="@color/white">
+		        
+                <EditText
+                    android:id="@+id/business_plan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:minHeight="@dimen/margin_160"
+                    android:maxLength="1024"
+                    android:textSize="@dimen/margin_16"
+                    android:textColor="@color/text_color_normal"
+                    android:background="@null"
+                    android:textColorHint="@color/text_color_weak"
+                    android:hint="请填写出差计划"/>
+                
+            </RelativeLayout>
+            
+            <View 
+        		style="@style/devide_line_horizontal"/>
+            
+            <RelativeLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/margin_10"
+		        android:paddingBottom="@dimen/margin_10"
+		        android:paddingLeft="@dimen/margin_16"
+		        android:paddingRight="@dimen/margin_16"
+		        android:background="@color/white">
+                
+                <TextView 
+	                android:id="@+id/business_info"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:textColor="@color/text_color_weak"
+	                android:textSize="@dimen/margin_12"
+	                android:text="年度已累计出差次数：0 次   年度已累计出差天数：0.0 天"/>
+                
+            </RelativeLayout>
+            
+        </LinearLayout>
+        
+    </ScrollView>
+    
+</RelativeLayout>

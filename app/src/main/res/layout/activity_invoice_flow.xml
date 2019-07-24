@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:fitsSystemWindows="true" >
+    
+	<com.huntkey.software.sceo.widget.BackTitle
+        android:id="@+id/invoice_flow_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"/>
+	
+	<View 
+	    android:id="@+id/invoice_flow_line"
+	    android:layout_width="@dimen/margin_1"
+	    android:layout_height="match_parent"
+	    android:layout_below="@+id/invoice_flow_title"
+	    android:layout_marginLeft="@dimen/margin_26"
+	    android:background="@color/gray_btn_bg_pressed_color"
+	    android:visibility="invisible"/>
+	
+	<ListView 
+	    android:id="@+id/invoice_flow_listview"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@+id/invoice_flow_title"
+	    android:cacheColorHint="@color/transparent"
+	    android:divider="@null"/>
+	
+</RelativeLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/margin_280"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_corners"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:textAlignment="center"
+        android:text="移动考勤申请单"
+        android:textSize="@dimen/margin_16"
+        android:textColor="@color/actionbar_color"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_0.1"
+        android:background="@color/devide_line"
+        android:layout_marginTop="@dimen/margin_10"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin_10"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10">
+
+        <TextView
+            android:id="@+id/mapRadiusLat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/margin_16"
+            android:textColor="@color/text_color_normal"
+            android:text="经度：0.0"/>
+
+        <TextView
+            android:id="@+id/mapRadiusLon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/margin_16"
+            android:textColor="@color/text_color_normal"
+            android:text="纬度：0.0"/>
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/mapRadiusRg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/mapRadiusRb1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="启用"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/mapRadiusRb2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="不启用" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/mapRadiusLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_5"
+        android:textSize="@dimen/margin_16"
+        android:textColor="@color/text_color_normal"
+        android:hint="请输入地点"/>
+
+    <EditText
+        android:id="@+id/mapRadiusName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_5"
+        android:textSize="@dimen/margin_16"
+        android:textColor="@color/text_color_normal"
+        android:hint="请输入名称"/>
+
+    <EditText
+        android:id="@+id/mapRadiusEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_5"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10"
+        android:textSize="@dimen/margin_16"
+        android:textColor="@color/text_color_normal"
+        android:hint="请输入半径（默认为100）"/>
+
+    <LinearLayout
+        android:id="@+id/mapRadiusDevGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10"
+        android:paddingTop="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_10"
+        android:background="@drawable/bg_selector_w2g">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/margin_16"
+            android:textColor="@color/text_color_normal"
+            android:text="选择卡机组别"/>
+
+        <TextView
+            android:id="@+id/mapRadiusDevGro"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/margin_16"
+            android:textColor="@color/text_color_normal"
+            android:text=""/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_right"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_0.1"
+        android:background="@color/devide_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_10">
+
+        <TextView
+            android:id="@+id/mapRadiusCancle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textSize="@dimen/margin_16"
+            android:text="取消"/>
+
+        <TextView
+            android:id="@+id/mapRadiusConfirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textSize="@dimen/margin_16"
+            android:textColor="@color/actionbar_color"
+            android:text="确定"/>
+
+    </LinearLayout>
+
+</LinearLayout>

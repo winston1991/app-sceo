@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ic_login_bg"
+    android:fitsSystemWindows="true" >
+
+    <TextView 
+        android:id="@+id/gesture_verify_empcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_30"
+        android:text="陈梁"
+        android:textSize="@dimen/margin_16"
+        android:textColor="@color/text_color_normal"/>
+    
+    <TextView 
+        android:id="@+id/gesture_verify_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gesture_verify_empcode"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/text_color_weak"
+        android:textSize="@dimen/margin_16"
+        android:text="请绘制手势密码"/>
+    
+    <TextView 
+        android:id="@+id/gesture_verify_warn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gesture_verify_tip"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/text_color_weak"
+        android:textSize="@dimen/margin_12"
+        android:text="5次失败后需要重新登录"
+        android:visibility="invisible"/>
+    
+    <FrameLayout 
+        android:id="@+id/gesture_verify_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_below="@+id/gesture_verify_warn">
+        
+    </FrameLayout>
+    
+    <TextView 
+        android:id="@+id/gesture_verify_forget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_30"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/margin_16"
+        android:textColor="@color/title_color"
+        android:text="忘记密码？"/>
+    
+</RelativeLayout>

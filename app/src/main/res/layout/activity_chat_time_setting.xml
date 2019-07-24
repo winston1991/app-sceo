@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:background="@color/background_color"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true" >
+
+    <com.huntkey.software.sceo.widget.CommonTitle
+        android:id="@+id/chat_time_setting_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"/>
+    
+    <LinearLayout 
+        android:id="@+id/chat_time_setting_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_below="@+id/chat_time_setting_title"
+        android:orientation="horizontal">
+        
+        <View 
+            android:layout_width="3dp"
+            android:layout_height="@dimen/margin_36"
+            android:layout_marginTop="-130dp"
+            android:layout_gravity="center_vertical"
+            android:background="#469DFD"/>
+        
+	    <com.huntkey.software.sceo.widget.wheelview.WheelView
+	        android:id="@+id/wheel_hour"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="-130dp"
+	        android:layout_weight="1"/>
+	    
+	    <com.huntkey.software.sceo.widget.wheelview.WheelView
+	        android:id="@+id/wheel_min"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="-130dp"
+	        android:layout_weight="1"/>
+	    
+	    <com.huntkey.software.sceo.widget.wheelview.WheelView
+	        android:id="@+id/wheel_sec"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="-130dp"
+	        android:layout_weight="1"/>
+	    
+	    <View 
+            android:layout_width="3dp"
+            android:layout_height="@dimen/margin_36"
+            android:layout_marginTop="-130dp"
+            android:layout_gravity="center_vertical"
+            android:background="#469DFD"/>
+	    
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/chat_time_setting_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/chat_time_setting_title"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+	    
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-130dp"
+            android:paddingLeft="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/margin_8"
+            android:textColor="@color/title_color"
+            android:text="时"/>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-130dp"
+            android:paddingLeft="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/margin_8"
+            android:textColor="@color/title_color"
+            android:text="分"/>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-130dp"
+            android:paddingLeft="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/margin_8"
+            android:textColor="@color/title_color"
+            android:text="秒"/>
+        
+    </LinearLayout>
+    
+</RelativeLayout>

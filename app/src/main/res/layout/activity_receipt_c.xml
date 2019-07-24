@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/rpt_c_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"
+        android:background="@color/colorPrimary"/>
+
+    <com.huntkey.software.sceo.widget.ControlEditText
+        android:id="@+id/rpt_c_cet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_below="@+id/rpt_c_toolbar"
+        android:background="@drawable/border_empty"
+        android:padding="@dimen/margin_10"
+        android:hint="扫描收货的所有箱号条码"
+        android:textSize="@dimen/textsize_16"
+        android:textColor="@color/text_color_normal" />
+
+    <View
+        android:id="@+id/rpt_c_line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1"
+        android:layout_below="@+id/rpt_c_cet"
+        android:layout_marginTop="@dimen/margin_4"
+        android:background="@color/background_color"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rpt_c_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rpt_c_line1"
+        android:background="@color/background_color" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/rpt_c_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_submit"
+        fab:fab_colorNormal="@color/colorPrimary"
+        fab:fab_colorPressed="@color/colorPrimaryDark"
+        fab:fab_colorRipple="@color/colorAccent"/>
+
+</RelativeLayout>

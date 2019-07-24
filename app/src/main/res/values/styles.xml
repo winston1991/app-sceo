@@ -1,0 +1,155 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    
+    <!-- 横向分割线 -->
+    <style name="devide_line_horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/margin_0.5</item>
+        <item name="android:background">@color/devide_line</item>
+    </style>
+    
+    <!-- 横向分割线-蓝色 -->
+    <style name="devide_line_horizontal_blue">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/margin_0.5</item>
+        <item name="android:background">@color/title_color</item>
+    </style>
+    
+    <!-- 横向分割线-登录 -->
+    <style name="devide_line_horizontal_1px">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.1dp</item>
+        <item name="android:background">@color/title_color</item>
+    </style>
+    
+    <!-- 自定义checkboox -->
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_style</item>
+    </style>
+    
+    <!-- 选人item自定义checkbox -->
+    <style name="ChooseCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/choose_checkbox_style</item>
+    </style>
+    
+    <!-- 选部门item自定义单选checkbox -->
+    <style name="ChooseSigleboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/sigle_checkbox_style</item>
+    </style>
+    
+    <!-- 删除item自定义checkbox -->
+    <style name="ChooseDelCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_del_style</item>
+    </style>
+    
+    <!-- 收藏按钮的checkbox -->
+    <style name="CollectCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/collect_style</item>
+    </style>
+
+    <!-- sportDialog -->
+    <style name="SpotsDialogDefault" parent="android:Theme.DeviceDefault.Light.Dialog">
+        <item name="DialogTitleAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="DialogTitleText">加载中…</item>
+        <item name="DialogSpotCount">5</item>
+    </style>
+    
+    <!-- sweetAlertDialog -->
+    <style name="alert_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@color/float_transparent</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+    <style name="dialog_blue_button" parent="@android:style/Widget.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">31dp</item>
+        <item name="android:background">@drawable/blue_button_background</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingLeft">21dp</item>
+        <item name="android:paddingRight">21dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    
+    <!-- 通知栏的下载进度progressbar -->
+    <style name="ProgressBarHorizontal_color" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/loading_progress_bar</item>
+        <item name="android:minHeight">2dip</item>
+        <item name="android:maxHeight">2dip</item>
+    </style>
+    
+    <!-- 右上角popupwindow -->
+    <style name="AnimationPreview">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+    
+    <style name="Anim_fade" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/fade</item>
+    </style>
+    
+    <style name="fade" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/fade_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <style name="NoBackDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="MenuLabelsStyle">
+        <item name="android:background">@drawable/fab_label_background</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/textsize_14</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="MenuButtonsStyle">
+        <item name="fab_size">mini</item>
+        <item name="fab_showAnimation">@anim/jump_from_down</item>
+        <item name="fab_hideAnimation">@anim/jump_to_down</item>
+        <item name="fab_shadowColor">@color/gray</item>
+        <item name="fab_colorNormal">@color/red_btn_bg_color</item>
+        <item name="fab_colorPressed">@color/red_btn_bg_pressed_color</item>
+        <item name="fab_colorRipple">@color/warning_stroke_color</item>
+    </style>
+
+</resources>

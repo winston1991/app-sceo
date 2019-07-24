@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ic_wizard_one_bg" >
+    
+    <TextView 
+        android:id="@+id/wizard_one_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_36"
+        android:textColor="#FF9117"
+        android:textSize="@dimen/margin_30"
+        android:text="全面企业e化管理"/>
+    
+    <ImageView 
+        android:id="@+id/wizard_one_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_160"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_wizard_one_img"/>
+    
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/wizard_one_shimmer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_32">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-thin"
+            android:textSize="@dimen/margin_20"
+            android:textColor="@color/subtransparent"
+            android:text="向左滑动"
+            android:gravity="center"
+            android:drawableLeft="@drawable/ic_arrow_4"
+            android:drawableRight="@drawable/ic_arrow_4"
+            android:drawablePadding="@dimen/margin_5"/>
+        
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_color">
+
+    <com.huntkey.software.sceo.widget.BackTitle
+        android:id="@+id/linkman_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"/>
+    
+    <com.huntkey.software.sceo.widget.ClearEditText
+        android:id="@+id/linkman_clear_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40"
+        android:paddingLeft="@dimen/margin_16"
+        android:paddingRight="@dimen/margin_16"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/linkman_title"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="@dimen/margin_5"
+        android:hint="搜索联系人"
+        android:singleLine="true"
+        android:textSize="@dimen/margin_16"/>
+    
+    <View 
+        android:id="@+id/linkman_line1"
+        android:layout_below="@+id/linkman_clear_edittext"
+        style="@style/devide_line_horizontal"/>
+    
+     <TextView 
+        android:id="@+id/linkman_goto_books"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40"
+        android:layout_below="@+id/linkman_line1"
+        android:background="@drawable/bg_selector_w2g"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_16"
+        android:textSize="@dimen/margin_16"
+        android:textColor="@color/text_color_normal"
+        android:text="企业通讯录"/>
+    
+    <View 
+        android:id="@+id/linkman_line2"
+        android:layout_below="@+id/linkman_goto_books"
+        style="@style/devide_line_horizontal"/>
+    
+    <FrameLayout 
+        android:id="@+id/linkman_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linkman_line2">
+        
+        <ListView 
+            android:id="@+id/linkman_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scrollbars="none"
+            android:divider="@color/devide_line"
+            android:dividerHeight="@dimen/margin_0.5" />
+            
+        <TextView 
+            android:id="@+id/linkman_dialog"
+            android:layout_width="@dimen/margin_80"
+            android:layout_height="@dimen/margin_80"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/show_head_toast_bg"
+            android:textColor="@color/white"
+            android:textSize="@dimen/margin_30"
+            android:visibility="invisible"/>
+        
+        <com.huntkey.software.sceo.widget.sortlist.SideBar
+            android:id="@+id/linkman_sidebar"
+            android:layout_width="@dimen/margin_30"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right|center"/>
+        
+    </FrameLayout>
+    
+    <com.huntkey.software.sceo.widget.ErrorView
+        android:id="@+id/linkman_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/linkman_title"
+        app:ev_retryButtonText="@string/error_view_retry"
+        app:ev_retryButtonTextColor="@color/text_color_normal"
+        app:ev_subtitle="@string/error_view_title"/>
+    
+</RelativeLayout>

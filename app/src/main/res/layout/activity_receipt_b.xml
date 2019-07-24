@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/rpt_b_toolbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/rpt_b_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_48"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/rpt_b_nextstep"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="@dimen/margin_16"
+                android:textColor="@drawable/text_color_selector"
+                android:text="下一步"
+                android:layout_gravity="right"
+                android:paddingLeft="@dimen/margin_5"
+                android:paddingRight="@dimen/margin_5"/>
+
+        </android.support.v7.widget.Toolbar>
+
+        <com.miguelcatalan.materialsearchview.MaterialSearchView
+            android:id="@+id/rpt_b_search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+
+    <com.huntkey.software.sceo.widget.ClearEditText
+        android:id="@+id/rpt_b_cet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_2"
+        android:layout_below="@+id/rpt_b_toolbar_container"
+        android:background="@drawable/border_empty"
+        android:padding="@dimen/margin_10"
+        android:hint="扫描需要点货的收货单号"
+        android:textSize="@dimen/textsize_16"
+        android:textColor="@color/text_color_normal" />
+
+    <View
+        android:id="@+id/rpt_b_line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1"
+        android:layout_below="@+id/rpt_b_cet"
+        android:layout_marginTop="@dimen/margin_4"
+        android:background="@color/background_color"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rpt_b_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color"
+        android:layout_below="@+id/rpt_b_line1"/>
+
+</RelativeLayout>

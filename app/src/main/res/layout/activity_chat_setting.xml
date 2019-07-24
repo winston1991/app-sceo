@@ -1,0 +1,339 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:background="@color/background_color"
+	android:fitsSystemWindows="true"
+	android:clipToPadding="true">
+
+    <com.huntkey.software.sceo.widget.BackTitle
+        android:id="@+id/chat_setting_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"/>
+    
+    <ScrollView 
+        android:id="@+id/chat_setting_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/chat_setting_title"
+        android:scrollbars="none">
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            
+            <com.huntkey.software.sceo.widget.NewGridView
+                android:id="@+id/chat_setting_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@color/white"
+                android:columnWidth="@dimen/margin_56"
+                android:gravity="start"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4"/>
+            
+            <RelativeLayout 
+                android:id="@+id/chat_setting_name_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_selector_w2g"
+                android:paddingLeft="@dimen/margin_20"
+                android:paddingRight="@dimen/margin_20"
+                android:paddingTop="@dimen/margin_14"
+                android:paddingBottom="@dimen/margin_14"
+                android:layout_marginTop="@dimen/margin_16">
+                
+                <TextView 
+                    android:id="@+id/chat_setting_name_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/margin_16"
+                    android:textColor="#181818"
+                    android:text="待办事务名称"/>
+                
+                <TextView 
+                    android:id="@+id/chat_setting_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_toRightOf="@+id/chat_setting_name_tv1"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/margin_16"
+                    android:textColor="#aaaaaa"
+                    android:text="当前名称"/>
+                
+            </RelativeLayout>
+            
+            <View 
+                style="@style/devide_line_horizontal"/>
+            
+            <RelativeLayout 
+                android:id="@+id/chat_setting_time_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_selector_w2g"
+                android:paddingLeft="@dimen/margin_20"
+                android:paddingRight="@dimen/margin_20"
+                android:paddingTop="@dimen/margin_14"
+                android:paddingBottom="@dimen/margin_14">
+                
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/margin_16"
+                    android:textColor="#181818"
+                    android:text="刷新频率"/>
+                
+                <TextView 
+                    android:id="@+id/chat_setting_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/margin_16"
+                    android:textColor="#aaaaaa"
+                    android:text="1分钟"/>
+                
+            </RelativeLayout>
+            
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:orientation="vertical">
+                
+                <com.huntkey.software.sceo.widget.SwitchButton
+	                android:id="@+id/chat_setting_c1"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:background="@drawable/bg_selector_w2g"
+	                android:paddingLeft="@dimen/margin_20"
+	                android:paddingRight="@dimen/margin_20"
+	                android:paddingTop="@dimen/margin_14"
+	                android:paddingBottom="@dimen/margin_14"
+	                android:text="查看加入事务前的消息"
+	                android:checked="true"
+	                app:withTextInterval="@dimen/margin_16"
+	            	app:frameDrawable="@drawable/switch_frame"
+	            	app:stateDrawable="@drawable/selector_switch_state"
+	            	app:stateMaskDrawable="@drawable/switch_state_mask"
+	            	app:sliderDrawable="@drawable/selector_switch_slider"/>
+	            
+	            <View 
+	                android:id="@+id/chat_setting_line1"
+	                style="@style/devide_line_horizontal"/>
+	            
+	            <com.huntkey.software.sceo.widget.SwitchButton
+	                android:id="@+id/chat_setting_c2"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:background="@drawable/bg_selector_w2g"
+	                android:paddingLeft="@dimen/margin_20"
+	                android:paddingRight="@dimen/margin_20"
+	                android:paddingTop="@dimen/margin_14"
+	                android:paddingBottom="@dimen/margin_14"
+	                android:text="查看退出事务后的消息"
+	                android:checked="true"
+	                app:withTextInterval="@dimen/margin_16"
+	            	app:frameDrawable="@drawable/switch_frame"
+	            	app:stateDrawable="@drawable/selector_switch_state"
+	            	app:stateMaskDrawable="@drawable/switch_state_mask"
+	            	app:sliderDrawable="@drawable/selector_switch_slider"/>
+	            
+	            <View 
+	                android:id="@+id/chat_setting_line2"
+	                style="@style/devide_line_horizontal"/>
+	            
+	            <com.huntkey.software.sceo.widget.SwitchButton
+	                android:id="@+id/chat_setting_c3"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:background="@drawable/bg_selector_w2g"
+	                android:paddingLeft="@dimen/margin_20"
+	                android:paddingRight="@dimen/margin_20"
+	                android:paddingTop="@dimen/margin_14"
+	                android:paddingBottom="@dimen/margin_14"
+	                android:text="邀请其他人员加入"
+	                android:checked="true"
+	                app:withTextInterval="@dimen/margin_16"
+	            	app:frameDrawable="@drawable/switch_frame"
+	            	app:stateDrawable="@drawable/selector_switch_state"
+	            	app:stateMaskDrawable="@drawable/switch_state_mask"
+	            	app:sliderDrawable="@drawable/selector_switch_slider"/>
+	            
+	            <View 
+	                android:id="@+id/chat_setting_line3"
+	                style="@style/devide_line_horizontal"/>
+	            
+	            <com.huntkey.software.sceo.widget.SwitchButton
+	                android:id="@+id/chat_setting_c5"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:background="@drawable/bg_selector_w2g"
+	                android:paddingLeft="@dimen/margin_20"
+	                android:paddingRight="@dimen/margin_20"
+	                android:paddingTop="@dimen/margin_14"
+	                android:paddingBottom="@dimen/margin_14"
+	                android:text="事务消息免打扰"
+	                android:checked="false"
+	                app:withTextInterval="@dimen/margin_16"
+	            	app:frameDrawable="@drawable/switch_frame"
+	            	app:stateDrawable="@drawable/selector_switch_state"
+	            	app:stateMaskDrawable="@drawable/switch_state_mask"
+	            	app:sliderDrawable="@drawable/selector_switch_slider"/>
+	            
+	            <View 
+	                style="@style/devide_line_horizontal"/>
+	            
+	            <com.huntkey.software.sceo.widget.SwitchButton
+	                android:id="@+id/chat_setting_c7"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:background="@drawable/bg_selector_w2g"
+	                android:paddingLeft="@dimen/margin_20"
+	                android:paddingRight="@dimen/margin_20"
+	                android:paddingTop="@dimen/margin_14"
+	                android:paddingBottom="@dimen/margin_14"
+	                android:text="显示参与人姓名"
+	                android:checked="true"
+	                app:withTextInterval="@dimen/margin_16"
+	            	app:frameDrawable="@drawable/switch_frame"
+	            	app:stateDrawable="@drawable/selector_switch_state"
+	            	app:stateMaskDrawable="@drawable/switch_state_mask"
+	            	app:sliderDrawable="@drawable/selector_switch_slider"/>
+                
+            </LinearLayout>
+            
+<!--             <com.huntkey.software.sceo.widget.SwitchButton
+                android:id="@+id/chat_setting_c1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@drawable/bg_selector_w2g"
+                android:paddingLeft="@dimen/margin_20"
+                android:paddingRight="@dimen/margin_20"
+                android:paddingTop="@dimen/margin_14"
+                android:paddingBottom="@dimen/margin_14"
+                android:text="查看加入事务前的消息"
+                android:checked="true"
+                app:withTextInterval="@dimen/margin_16"
+            	app:frameDrawable="@drawable/switch_frame"
+            	app:stateDrawable="@drawable/selector_switch_state"
+            	app:stateMaskDrawable="@drawable/switch_state_mask"
+            	app:sliderDrawable="@drawable/selector_switch_slider"/>
+            
+            <View 
+                style="@style/devide_line_horizontal"/>
+            
+            <com.huntkey.software.sceo.widget.SwitchButton
+                android:id="@+id/chat_setting_c2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_selector_w2g"
+                android:paddingLeft="@dimen/margin_20"
+                android:paddingRight="@dimen/margin_20"
+                android:paddingTop="@dimen/margin_14"
+                android:paddingBottom="@dimen/margin_14"
+                android:text="查看加入事务后的消息"
+                android:checked="true"
+                app:withTextInterval="@dimen/margin_16"
+            	app:frameDrawable="@drawable/switch_frame"
+            	app:stateDrawable="@drawable/selector_switch_state"
+            	app:stateMaskDrawable="@drawable/switch_state_mask"
+            	app:sliderDrawable="@drawable/selector_switch_slider"/>
+            
+            <View 
+                style="@style/devide_line_horizontal"/>
+            
+            <com.huntkey.software.sceo.widget.SwitchButton
+                android:id="@+id/chat_setting_c3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_selector_w2g"
+                android:paddingLeft="@dimen/margin_20"
+                android:paddingRight="@dimen/margin_20"
+                android:paddingTop="@dimen/margin_14"
+                android:paddingBottom="@dimen/margin_14"
+                android:text="邀请其他人员加入"
+                android:checked="true"
+                app:withTextInterval="@dimen/margin_16"
+            	app:frameDrawable="@drawable/switch_frame"
+            	app:stateDrawable="@drawable/selector_switch_state"
+            	app:stateMaskDrawable="@drawable/switch_state_mask"
+            	app:sliderDrawable="@drawable/selector_switch_slider"/>
+            
+            <View 
+                style="@style/devide_line_horizontal"/>
+            
+            <com.huntkey.software.sceo.widget.SwitchButton
+                android:id="@+id/chat_setting_c5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_selector_w2g"
+                android:paddingLeft="@dimen/margin_20"
+                android:paddingRight="@dimen/margin_20"
+                android:paddingTop="@dimen/margin_14"
+                android:paddingBottom="@dimen/margin_14"
+                android:text="事务消息免打扰"
+                android:checked="false"
+                app:withTextInterval="@dimen/margin_16"
+            	app:frameDrawable="@drawable/switch_frame"
+            	app:stateDrawable="@drawable/selector_switch_state"
+            	app:stateMaskDrawable="@drawable/switch_state_mask"
+            	app:sliderDrawable="@drawable/selector_switch_slider"/>
+            
+            <View 
+                style="@style/devide_line_horizontal"/>
+            
+            <com.huntkey.software.sceo.widget.SwitchButton
+                android:id="@+id/chat_setting_c7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_selector_w2g"
+                android:paddingLeft="@dimen/margin_20"
+                android:paddingRight="@dimen/margin_20"
+                android:paddingTop="@dimen/margin_14"
+                android:paddingBottom="@dimen/margin_14"
+                android:text="显示参与人姓名"
+                android:checked="true"
+                app:withTextInterval="@dimen/margin_16"
+            	app:frameDrawable="@drawable/switch_frame"
+            	app:stateDrawable="@drawable/selector_switch_state"
+            	app:stateMaskDrawable="@drawable/switch_state_mask"
+            	app:sliderDrawable="@drawable/selector_switch_slider"/> -->
+            
+            <Button 
+		        android:id="@+id/chat_setting_btn"
+		        android:layout_width="match_parent"
+		        android:layout_height="@dimen/margin_48"
+		        android:layout_marginTop="@dimen/margin_23"
+		        android:layout_marginLeft="@dimen/margin_10"
+		        android:layout_marginRight="@dimen/margin_10"
+		        android:layout_below="@+id/login_layout3"
+		        android:background="@drawable/chat_setting_btn"
+		        android:text="删除并退出"
+		        android:gravity="center"
+		        android:textColor="@color/white"
+		        android:textSize="@dimen/textsize_18"/>
+            
+            <View 
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_48"/>
+            
+        </LinearLayout>
+        
+    </ScrollView>
+    
+    <com.huntkey.software.sceo.widget.ErrorView
+        android:id="@+id/chat_setting_errorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/chat_setting_title"
+        app:ev_retryButtonText="@string/error_view_retry"
+        app:ev_retryButtonTextColor="@color/text_color_normal"
+        app:ev_subtitle="@string/error_view_title"/>
+    
+</RelativeLayout>

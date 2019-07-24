@@ -1,0 +1,120 @@
+<com.huntkey.software.sceo.widget.RelativeLayoutAutoHintInputMethod
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:background="@color/background_color" >
+
+    <com.huntkey.software.sceo.widget.BackTitle
+        android:id="@+id/change_pwd_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"/>
+    
+    <RelativeLayout 
+        android:id="@+id/change_pwd_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/change_pwd_title"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_23"
+        android:background="@drawable/border_corners">
+        
+        <TextView 
+            android:id="@+id/change_pwd_old_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_10"
+            android:textColor="@color/text_color_normal"
+            android:textSize="@dimen/margin_16"
+            android:text="旧    密    码"/>
+        
+        <com.huntkey.software.sceo.widget.ClearEditText
+	        android:id="@+id/change_pwd_old"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:password="true"
+	        android:padding="@dimen/margin_10"
+	        android:layout_toRightOf="@+id/change_pwd_old_tv"
+	        android:background="@null"
+	        android:hint="请输入旧密码"
+	        android:singleLine="true"
+	        android:textColor="@color/text_color_normal"
+	        android:textSize="@dimen/textsize_16"/>
+        
+        <View 
+            android:id="@+id/change_pwd_line1"
+            style="@style/devide_line_horizontal"
+            android:layout_below="@+id/change_pwd_old_tv"/>
+        
+        <TextView 
+            android:id="@+id/change_pwd_new_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/change_pwd_line1"
+            android:padding="@dimen/margin_10"
+            android:textColor="@color/text_color_normal"
+            android:textSize="@dimen/margin_16"
+            android:text="新    密    码"/>
+        
+        <com.huntkey.software.sceo.widget.ClearEditText
+	        android:id="@+id/change_pwd_new"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:password="true"
+	        android:layout_below="@+id/change_pwd_line1"
+	        android:padding="@dimen/margin_10"
+	        android:layout_toRightOf="@+id/change_pwd_new_tv"
+	        android:background="@null"
+	        android:hint="请输入新密码"
+	        android:singleLine="true"
+	        android:textColor="@color/text_color_normal"
+	        android:textSize="@dimen/textsize_16"/>
+        
+        <View 
+            android:id="@+id/change_pwd_line2"
+            style="@style/devide_line_horizontal"
+            android:layout_below="@+id/change_pwd_new_tv"/>
+        
+        <TextView 
+            android:id="@+id/change_pwd_new_confirm_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/change_pwd_line2"
+            android:padding="@dimen/margin_10"
+            android:textColor="@color/text_color_normal"
+            android:textSize="@dimen/margin_16"
+            android:text="确认新密码"/>
+        
+        <com.huntkey.software.sceo.widget.ClearEditText
+	        android:id="@+id/change_pwd_new_confirm"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:password="true"
+	        android:layout_below="@+id/change_pwd_line2"
+	        android:padding="@dimen/margin_10"
+	        android:layout_toRightOf="@+id/change_pwd_new_confirm_tv"
+	        android:background="@null"
+	        android:hint="请再次输入新密码"
+	        android:singleLine="true"
+	        android:textColor="@color/text_color_normal"
+	        android:textSize="@dimen/textsize_16"/>
+        
+    </RelativeLayout>
+    
+    <Button 
+        android:id="@+id/change_pwd_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_23"
+        android:layout_below="@+id/change_pwd_layout1"
+        android:background="@drawable/login_btn"
+        android:text="确定"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_18"/>
+    
+</com.huntkey.software.sceo.widget.RelativeLayoutAutoHintInputMethod>

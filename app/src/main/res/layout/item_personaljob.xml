@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/margin_1"
+    app:cardElevation="@dimen/margin_1"
+    app:cardUseCompatPadding="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginBottom="@dimen/margin_10">
+
+        <CheckBox
+            android:id="@+id/item_pj_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@+id/item_pj_checkbox">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/item_pj_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_normal"
+                    android:textSize="@dimen/textsize_16"
+                    android:text="D00005-业务支援部"/>
+
+                <TextView
+                    android:id="@+id/item_pj_charname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:textColor="@color/text_color_deep_weak"
+                    android:textSize="@dimen/textsize_14"
+                    android:text="五金处"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/item_pj_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_2"
+                android:textSize="@dimen/textsize_16"
+                android:text="23-采购检验单-WHG110"/>
+
+            <TextView
+                android:id="@+id/item_pj_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_2"
+                android:textSize="@dimen/textsize_16"
+                android:text="RIH-119110 02-10 11:10"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

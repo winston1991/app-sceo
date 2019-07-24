@@ -1,0 +1,16 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView 
+        android:id="@+id/formadd_left_item_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color_normal"
+        android:textSize="@dimen/margin_16"
+        android:layout_centerInParent="true"
+        android:paddingTop="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_10"
+        android:text="社保卡啥时候给我办好？"/>
+    
+</RelativeLayout>

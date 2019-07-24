@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+    <TextView 
+        android:id="@+id/formedit_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_7"
+        android:textSize="@dimen/margin_16"
+        android:textColor="@color/text_color_normal"
+        android:text="职员人数"/>
+    
+    <TextView 
+        android:id="@+id/formedit_item_dep"
+        android:layout_width="@dimen/margin_72"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_7"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_below="@+id/formedit_item_name"
+        android:textSize="@dimen/margin_14"
+        android:textColor="@color/text_color_weak"
+        android:text="财务分类"/>
+    
+    <!-- <TextView 
+        android:id="@+id/formedit_item_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/formedit_item_dep"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginBottom="@dimen/margin_7"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_below="@+id/formedit_item_name"
+        android:textSize="@dimen/margin_14"
+        android:textColor="@color/text_color_weak"
+        android:text="合肥电器"/> -->
+    
+    <CheckBox 
+        android:id="@+id/formedit_item_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_10"
+        android:checked="false"
+     	android:clickable="true"
+     	android:focusable="true"
+     	style="@style/ChooseDelCheckboxTheme"/>
+    
+    <ImageView 
+        android:id="@+id/formedit_item_order"
+        android:layout_width="@dimen/margin_50"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/formedit_item_del"
+        android:layout_marginRight="@dimen/margin_23"
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_order"/>
+    
+    <ImageView 
+     	android:id="@+id/formedit_item_top"
+     	android:layout_width="wrap_content"
+     	android:layout_height="wrap_content"
+     	android:layout_toLeftOf="@+id/formedit_item_order"
+     	android:layout_marginRight="@dimen/margin_23"
+     	android:layout_centerVertical="true"
+     	android:src="@drawable/ic_gototop"/>
+    
+</RelativeLayout>

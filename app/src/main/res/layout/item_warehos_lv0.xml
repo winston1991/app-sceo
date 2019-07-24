@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_warh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginBottom="@dimen/margin_1"
+    android:paddingLeft="@dimen/margin_10"
+    android:paddingRight="@dimen/margin_10"
+    android:paddingTop="@dimen/margin_5"
+    android:paddingBottom="@dimen/margin_5">
+
+    <TextView
+        android:id="@+id/item_warh_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="1"/>
+
+    <TextView
+        android:id="@+id/item_warh_part"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/item_warh_num"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:textColor="@color/text_color_normal"
+        android:text="料号：1103613010RB"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_warh_part"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_toRightOf="@+id/item_warh_num">
+
+        <TextView
+            android:id="@+id/item_warh_plan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:layout_marginTop="@dimen/margin_5"
+            android:textColor="@color/text_color_normal"
+            android:text="任务量：5000"/>
+
+        <TextView
+            android:id="@+id/item_warh_actual"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:layout_marginTop="@dimen/margin_5"
+            android:textColor="@color/text_color_normal"
+            android:text="点数量：5010"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/item_warh_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_arrow_right"/>
+
+</RelativeLayout>

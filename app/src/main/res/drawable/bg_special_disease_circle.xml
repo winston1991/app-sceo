@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="oval" >
+            <corners android:radius="@dimen/margin_90"/>
+            <solid android:color="@color/deep_blue" />
+            <size android:width="@dimen/margin_170" android:height="@dimen/margin_170"/>
+        </shape>
+    </item>
+
+    <item android:bottom="@dimen/margin_8" android:right="@dimen/margin_8" android:top="@dimen/margin_8" android:left="@dimen/margin_8" >
+        <selector xmlns:android="http://schemas.android.com/apk/res/android">
+            <item android:state_pressed="true">
+                <shape android:shape="oval" >
+                    <corners android:radius="@dimen/margin_90"/>
+                    <solid android:color="@color/login_btn_click" />
+                    <size android:width="@dimen/margin_162" android:height="@dimen/margin_162"/>
+                </shape>
+            </item>
+
+            <item>
+                <shape android:shape="oval" >
+                    <corners android:radius="@dimen/margin_90"/>
+                    <solid android:color="@color/login_btn_normal" />
+                    <size android:width="@dimen/margin_162" android:height="@dimen/margin_162"/>
+                </shape>
+            </item>
+
+        </selector>
+    </item>
+
+</layer-list>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/sl_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"
+        android:background="@color/colorPrimary">
+
+        <RadioGroup
+            android:id="@+id/sl_rg"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:layout_width="@dimen/margin_180"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/sl_rb_todo"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:text="待捡"
+                android:textSize="@dimen/textsize_14"
+                android:gravity="center"
+                android:paddingTop="@dimen/margin_5"
+                android:paddingBottom="@dimen/margin_5"
+                android:textColor="@color/title_text_sel"
+                android:background="@drawable/rb_bg_01"/>
+
+            <RadioButton
+                android:id="@+id/sl_rb_has"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="-1dp"
+                android:text="已捡"
+                android:button="@null"
+                android:gravity="center"
+                android:textSize="@dimen/textsize_14"
+                android:paddingTop="@dimen/margin_5"
+                android:paddingBottom="@dimen/margin_5"
+                android:textColor="@color/title_text_sel"
+                android:background="@drawable/rb_bg_03"/>
+
+            <RadioButton
+                android:id="@+id/sl_rb_all"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="-1dp"
+                android:text="全部"
+                android:checked="true"
+                android:button="@null"
+                android:gravity="center"
+                android:textSize="@dimen/textsize_14"
+                android:paddingTop="@dimen/margin_5"
+                android:paddingBottom="@dimen/margin_5"
+                android:textColor="@color/title_text_sel"
+                android:background="@drawable/rb_bg_02"/>
+        </RadioGroup>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/sl_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10"
+        android:paddingTop="@dimen/margin_5"
+        android:paddingBottom="@dimen/margin_5"
+        android:background="@color/white"
+        android:layout_below="@+id/sl_toolbar"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/sl_job"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/text_color_normal"
+            android:textSize="@dimen/textsize_14"
+            android:text="任务："/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_normal"
+                android:textSize="@dimen/textsize_14"
+                android:text="单号："/>
+
+            <TextView
+                android:id="@+id/sl_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_normal"
+                android:textSize="@dimen/textsize_14"
+                android:gravity="right"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text=""/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/sl_refreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/sl_layout1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/sl_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/sl_float_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        fab:menu_labels_style="@style/MenuLabelsStyle"
+        fab:menu_labels_showAnimation="@anim/jump_from_down"
+        fab:menu_labels_hideAnimation="@anim/jump_to_down"
+        fab:menu_animationDelayPerItem="0"
+        fab:menu_colorNormal="@color/colorPrimary"
+        fab:menu_colorPressed="@color/colorPrimaryDark"
+        fab:menu_colorRipple="@color/colorAccent">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/sl_submit_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_floating_submit"
+            fab:fab_label="提交"
+            style="@style/MenuButtonsStyle" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/sl_print_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_floating_print"
+            fab:fab_label="打印"
+            style="@style/MenuButtonsStyle" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>

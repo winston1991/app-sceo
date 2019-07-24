@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_color" >
+
+    <com.huntkey.software.sceo.widget.MainTitle
+	    android:id="@+id/me_title"
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/margin_48"/>
+            
+    <RelativeLayout 
+        android:id="@+id/me_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16"
+        android:background="@drawable/bg_selector_w2g"
+        android:layout_below="@+id/me_title"
+        android:paddingLeft="@dimen/margin_20"
+        android:paddingRight="@dimen/margin_20"
+        android:paddingTop="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_10">
+        
+        <ImageView 
+            android:id="@+id/me_photo"
+            android:layout_width="@dimen/margin_72"
+            android:layout_height="@dimen/margin_72"
+            android:src="@drawable/ic_login_photo"/>
+        
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/me_photo"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_20">
+            
+            <TextView 
+	            android:id="@+id/me_name"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textSize="@dimen/margin_18"
+	            android:textColor="@color/text_color_normal"
+	            android:text=""/>
+            
+            <TextView 
+                android:id="@+id/me_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:textSize="@dimen/margin_18"
+	            android:textColor="@color/text_color_weak"
+	            android:text=""/>
+            
+        </LinearLayout>
+        
+ 	</RelativeLayout>
+ 	
+    <GridView 
+        android:id="@+id/me_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/margin_16"
+        android:background="@color/white"
+        android:layout_below="@+id/me_layout1"
+        android:layout_marginTop="@dimen/margin_16"
+        android:horizontalSpacing="0dp"
+        android:verticalSpacing="0dp"
+        android:numColumns="4"
+        android:scrollbars="none"/>
+ 	
+</RelativeLayout>

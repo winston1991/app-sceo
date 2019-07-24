@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huntkey.software.sceo.widget.RelativeLayoutAutoHintInputMethod xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/otn_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"
+        android:background="@color/colorPrimary"/>
+
+    <com.huntkey.software.sceo.widget.ClearEditText
+        android:id="@+id/otn_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_23"
+        android:layout_below="@+id/otn_toolbar"
+        android:background="@drawable/border_empty"
+        android:padding="@dimen/margin_10"
+        android:hint="输入或者扫描出库任务单号"
+        android:textSize="@dimen/textsize_16"
+        android:textColor="@color/text_color_normal" />
+
+    <Button
+        android:id="@+id/out_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_23"
+        android:layout_below="@+id/otn_edittext"
+        android:background="@drawable/login_btn"
+        android:text="分配"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_18"/>
+
+    <Button
+        android:id="@+id/out_delete"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_below="@+id/out_btn"
+        android:background="@drawable/login_btn"
+        android:text="删除"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_18"/>
+
+</com.huntkey.software.sceo.widget.RelativeLayoutAutoHintInputMethod>

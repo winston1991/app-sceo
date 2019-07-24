@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:fab="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/opos_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"
+        android:background="@color/colorPrimary"/>
+
+    <LinearLayout
+        android:id="@+id/opos_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_marginBottom="@dimen/margin_5"
+        android:layout_below="@+id/opos_toolbar"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/opos_nbr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/text_color_normal"
+            android:textSize="@dimen/textsize_14"
+            android:text="任务："/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_normal"
+                android:textSize="@dimen/textsize_14"
+                android:text="单号："/>
+
+            <TextView
+                android:id="@+id/opos_refnbr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_normal"
+                android:textSize="@dimen/textsize_14"
+                android:gravity="right"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text=""/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/opos_refreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray"
+        android:layout_below="@+id/opos_layout1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/opos_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/opos_float_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        fab:menu_labels_style="@style/MenuLabelsStyle"
+        fab:menu_labels_showAnimation="@anim/jump_from_down"
+        fab:menu_labels_hideAnimation="@anim/jump_to_down"
+        fab:menu_animationDelayPerItem="0"
+        fab:menu_colorNormal="@color/colorPrimary"
+        fab:menu_colorPressed="@color/colorPrimaryDark"
+        fab:menu_colorRipple="@color/colorAccent">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/opos_unusual_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_floating_unusual"
+            fab:fab_label="提交异常"
+            style="@style/MenuButtonsStyle" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>

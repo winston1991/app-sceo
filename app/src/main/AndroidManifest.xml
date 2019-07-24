@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.huntkey.software.sceo">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+    <application
+        android:name=".SceoApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="ESSgOMW6Pi3CTZvSa7dOBnyBZ5CESxQD"/>
+
+        <!-- 欢迎界面 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.splash.SplashActivity"
+            android:theme="@style/SplashTheme"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 主界面 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.MainActivity"
+            android:windowSoftInputMode="adjustNothing"
+            android:launchMode="singleTop"/>
+
+        <!-- 菜单界面 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.forms.FormActivity"/>
+        <!-- 启动界面 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.splash.WizardActivity"/>
+        <!--  登录界面 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.login.LoginActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:launchMode="singleTop">
+            <intent-filter >
+                <action android:name="com.huntkey.software.sceo.ui.activity.login.LoginActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <!-- 搜索界面 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.search.SearchActivity"
+            android:windowSoftInputMode="stateVisible">
+        </activity>
+        <!-- 员工详情页 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.empdetails.EmpDetailsActivity"/>
+        <!-- 头像查看 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.photoview.SpaceImageDetailActivity"/>
+        <!--  待办事务详情页 chat-->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.chat.ChatActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <!-- 发起待办事务 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.chat.CreatChatRoomActivity"/>
+        <!-- 待办事务设置 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.chat.ChatSettingActivity"/>
+        <!-- webView -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.WebViewActivity"
+            android:screenOrientation="sensor"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <!-- 从企业通讯录中选人 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.chat.CreatChatRoom2Activity"/>
+        <!-- 待办事务名称修改 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.chat.ChatNameSettingActivity"/>
+        <!-- 待办事务刷新时间修改 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.chat.ChatTimeSettingActivity"/>
+        <!-- 企业通讯录 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.linkman.BooksActivity"/>
+        <!-- 待审单据详情 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.invoicedetails.InvoiceDetailsActivity"
+            android:windowSoftInputMode="stateHidden"/>
+        <!--待审单据上传附件-->
+        <activity android:name=".ui.activity.invoicedetails.InvoiceAccessoryActivity"/>
+        <activity
+            android:name="me.iwf.photopicker.PhotoPickerActivity"/>
+        <activity
+            android:name="me.iwf.photopicker.PhotoPagerActivity"/>
+        <!-- 待审单据搜索 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.search.InvoiceSearchActivity"
+            android:windowSoftInputMode="stateVisible"/>
+        <!-- 待审单据联名 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.invoicedetails.InvoiceJointlyActivity"/>
+        <!-- 待审单据流程 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.invoicedetails.InvoiceFlowActivity"/>
+        <!-- 联系人(从"我"进入) -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.linkman.LinkmanActivity"/>
+        <!-- 表单 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.forms.ChartActivity"/>
+        <!-- 找回密码第一步 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.findpwd.FindPwdOne"/>
+        <!-- 找回密码第二步 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.findpwd.FindPwdTwo"/>
+        <!-- 修改密码 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.findpwd.ChangePwdActivity"/>
+        <!-- 即时快报编辑 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.forms.FormEditActivity"/>
+        <!-- 即时快报添加 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.forms.FormAddActivity"/>
+        <!-- 设置 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.setting.SettingActivity"/>
+        <!-- 手势密码设置 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.setting.GestureEditActivity"/>
+        <!-- 手势解锁/校验 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.setting.GestureVerifyActivity"/>
+        <!-- 手势修改 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.setting.GestureSetActivity"/>
+        <!-- 请假申请单 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.leave.LeaveActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <!-- 请假类型 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.leave.LeaveTypeActivity"/>
+        <!-- 请假代理人 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.leave.LeaveAgencyActivity"/>
+        <!-- 出差申请 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.business.BusinessActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <!-- 部门选择 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.forms.DepartmentActivity"/>
+        <!-- 图片剪切 -->
+        <activity
+            android:name="com.huntkey.software.sceo.ui.activity.chat.CorpActivity"/>
+
+        <!--移动应用-->
+        <activity android:name=".ui.activity.home.HomeActivity"
+            android:theme="@style/Anim_fade"/>
+        <!--下载菜单数据-->
+        <activity android:name=".ui.activity.home.DowndataActivity"
+            android:theme="@style/Anim_fade"/>
+        <!--外部条码转换-->
+        <activity android:name=".ui.activity.home.barconversion.ExternalBarConversionAActivity"/>
+        <activity android:name=".ui.activity.home.barconversion.ExternalBarConversionBActivity"/>
+        <activity android:name=".ui.activity.home.barconversion.ExternalBarConversionCActivity"/>
+        <!--蓝牙列表-->
+        <activity android:name=".ui.activity.home.bluetoothprint.BluetoothActivity"/>
+        <!--打印条码-->
+        <activity android:name=".ui.activity.home.bluetoothprint.PrintActivity"/>
+        <!--IQC条码抽检-->
+        <activity android:name=".ui.activity.home.iqccheck.IQCCheckActivity"/>
+        <!--条码复制修复-->
+        <activity android:name=".ui.activity.home.barrepair.BarRepairAActivity"/>
+        <activity android:name=".ui.activity.home.barrepair.BarRepairBActivity"/>
+        <!--个人条码打印-->
+        <activity android:name=".ui.activity.home.personalprint.PersonalPrintActivity"/>
+        <activity android:name=".ui.activity.home.personalprint.PersonalPrintDetailActivity"/>
+        <!--个人任务平台-->
+        <activity android:name=".ui.activity.home.personaljob.PersonalJobActivity"/>
+        <!--入库-->
+        <activity android:name=".ui.activity.home.instorage.InputTaskNumActivity"/>
+        <activity android:name=".ui.activity.home.instorage.AssignedStorageActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+        <activity android:name=".ui.activity.home.instorage.WarehousingActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+        <activity android:name=".ui.activity.home.instorage.DirectWarehousingActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+        <!--出库-->
+        <activity android:name=".ui.activity.home.outstorage.OutputTaskNumActivity"/>
+        <activity android:name=".ui.activity.home.outstorage.StorageLocationActivity"/>
+        <activity android:name=".ui.activity.home.outstorage.OutputPrintActivity"/>
+        <activity android:name=".ui.activity.home.outstorage.OutputScanActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+        <activity android:name=".ui.activity.home.outstorage.OutputNoScanActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name=".ui.activity.home.outstorage.OutputScanSecondActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+        <activity android:name=".ui.activity.home.outstorage.OutputNoScanSecondActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <!--储位调整-->
+        <activity android:name=".ui.activity.home.storageadjust.AdjustOrderActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+        <activity android:name=".ui.activity.home.storageadjust.AdjustmentActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+        <activity android:name=".ui.activity.home.storageadjust.AdjustPrintActivity"/>
+        <!--散箱作业-->
+        <activity android:name=".ui.activity.home.cloakoperations.ScanBoxNumActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+        <activity android:name=".ui.activity.home.cloakoperations.BoxOperationsActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+        <!--出库点货-->
+        <activity android:name=".ui.activity.home.outstockgoods.InputPickingNumActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+        <activity android:name=".ui.activity.home.outstockgoods.ChooseStorekeeperActivity"/>
+        <activity android:name=".ui.activity.home.outstockgoods.OutstockGoodsActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+        <!--条码拆分-->
+        <activity android:name=".ui.activity.home.barsplit.BarSplitAActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+        <activity android:name=".ui.activity.home.barsplit.BarSplitBActivity"/>
+        <activity android:name=".ui.activity.home.barsplit.BarSplitPrintActivity"/>
+        <!--条码生成-->
+        <activity android:name=".ui.activity.home.createqr.CreateQrActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+        <!--收货点货-->
+        <activity android:name=".ui.activity.home.receiptgoods.ReceiptAActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+        <activity android:name=".ui.activity.home.receiptgoods.ReceiptBActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name=".ui.activity.home.receiptgoods.ReceiptCActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+        <!--制令入库-->
+        <activity android:name=".ui.activity.home.orderinstore.OrderInstoreAActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name=".ui.activity.home.orderinstore.OrderInstoreBActivity"/>
+        <!--摄像头扫描二维码-->
+        <activity android:name=".ui.activity.home.ScanActivity"/>
+        <!--库存查询-->
+        <activity android:name=".ui.activity.home.storagequery.StorageQueryAActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name=".ui.activity.home.storagequery.StorageQueryBActivity"/>
+        <activity android:name=".ui.activity.home.storagequery.StorageQueryCActivity"/>
+        <activity android:name=".ui.activity.home.storagequery.StorageQueryDActivity"/>
+
+        <!--移动考勤-->
+        <activity android:name=".ui.activity.attence.AttenceWebActivity"/>
+        <activity android:name=".ui.activity.attence.AttenceActivity"/>
+        <activity android:name=".ui.activity.attence.BaiduMapActivity"/>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" >
+                </action>
+            </intent-filter>
+        </service>
+        <!-- 自动更新服务 -->
+        <service android:name="com.huntkey.software.sceo.service.AppUpdateService"
+            android:label="@string/app_name" >
+        </service>
+        <!-- 心跳服务 -->
+        <service
+            android:name="com.huntkey.software.sceo.service.HeartbeatService"
+            android:enabled="true" >
+        </service>
+        <!-- unkill服务 -->
+        <!--<service
+            android:name="com.huntkey.software.sceo.service.NotifyService"
+            android:enabled="true" >
+        </service>-->
+        <!-- 5分钟未操作自动退出服务 -->
+        <service android:name="com.huntkey.software.sceo.service.TimeoutService"
+            android:label="@string/app_name" >
+        </service>
+        <!--打印服务-->
+        <service android:name=".service.BtService"/>
+        <!-- 开机监听广播 -->
+        <!--<receiver android:name="com.huntkey.software.sceo.broadcast.BootBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.media.RINGER_MODE_CHANGED"/>
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>-->
+
+        <!--注册 存储照片的容器-->
+        <!--
+        name:属性值，固定写法
+        authorities:组件标识，按照江湖规矩,都以包名开头,避免和其它应用发生冲突。和FileProvider.getUriForFile()方法的第二个参数一致
+        exported:要求必须为false，为true则会报安全异常。
+        grantUriPermissions:true，表示授予 URI 临时访问权限。
+        -->
+        <provider
+            android:name=".others.MyProvider"
+            android:authorities="com.huntkey.software.sceo.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <!--指定Uri的共享路径-->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

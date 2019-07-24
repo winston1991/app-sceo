@@ -1,0 +1,91 @@
+<com.huntkey.software.sceo.widget.RelativeLayoutAutoHintInputMethod xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:background="@color/background_color"
+	android:fitsSystemWindows="true"
+	android:clipToPadding="true">
+
+	<com.huntkey.software.sceo.widget.BackTitle
+        android:id="@+id/chat_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"/>
+	
+	<RelativeLayout 
+	    android:id="@+id/chat_layout1"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingTop="@dimen/margin_3"
+	    android:paddingBottom="@dimen/margin_3"
+	    android:layout_alignParentBottom="true"
+	    android:background="@color/white">
+	    
+	    <ImageView 
+	        android:id="@+id/chat_photo"
+	        android:layout_width="@dimen/margin_30"
+	        android:layout_height="@dimen/margin_30"
+	        android:gravity="center"
+	        android:layout_centerVertical="true"
+	        android:src="@drawable/ic_camera_photo"/>
+	    
+	    <!-- <TextView 
+	        android:id="@+id/chat_sent_btn"
+	        android:layout_width="@dimen/margin_56"
+	        android:layout_height="@dimen/margin_36"
+	        android:layout_marginRight="@dimen/margin_10"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:gravity="center"
+	        android:background="@drawable/send_button_background"
+	        android:textSize="@dimen/margin_15"
+	        android:textColor="@color/text_color_normal"
+	        android:text="发送"/> -->
+	    <ImageView 
+	        android:id="@+id/chat_sent_btn"
+	        android:layout_width="@dimen/margin_30"
+	        android:layout_height="@dimen/margin_30"
+	        android:layout_alignParentRight="true"
+	        android:paddingRight="@dimen/margin_2"
+	        android:layout_centerVertical="true"
+	        android:gravity="center"
+	        android:src="@drawable/ic_send_gray"/>
+	    
+	    <EditText 
+	        android:id="@+id/chat_input_et"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:layout_toLeftOf="@+id/chat_sent_btn"
+	        android:layout_toRightOf="@+id/chat_photo"
+	        android:textColor="@color/text_color_normal"
+	        android:textSize="@dimen/margin_15"/>
+	    
+	</RelativeLayout>
+	
+	<View 
+	    android:id="@+id/chat_divider_line1"
+	    style="@style/devide_line_horizontal"
+	    android:layout_above="@+id/chat_layout1"/>
+
+	<com.huntkey.software.sceo.widget.xlistview.XListView
+	    android:id="@+id/chat_listView"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:divider="@null"
+	    android:dividerHeight="@dimen/margin_5"
+	    android:transcriptMode="normal"
+	    android:scrollbarStyle="outsideOverlay"
+	    android:layout_below="@+id/chat_title"
+	    android:layout_above="@+id/chat_divider_line1"/>
+	
+	<com.huntkey.software.sceo.widget.ErrorView
+        android:id="@+id/chat_errorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/chat_title"
+        app:ev_retryButtonText="@string/error_view_retry"
+        app:ev_retryButtonTextColor="@color/text_color_normal"
+        app:ev_subtitle="@string/error_view_title"/>
+    
+</com.huntkey.software.sceo.widget.RelativeLayoutAutoHintInputMethod>

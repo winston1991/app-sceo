@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="@dimen/margin_16"
+	    android:layout_marginRight="@dimen/margin_16"
+	    android:background="@drawable/border_corners_half_alpha"
+	    android:alpha="50">
+        
+        <TextView 
+	        android:id="@+id/login_pop_text"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="@dimen/margin_10"
+	        android:paddingRight="@dimen/margin_10"
+	        android:layout_marginTop="@dimen/margin_12"
+	        android:layout_marginBottom="@dimen/margin_12"
+	        android:layout_centerInParent="true"
+	        android:text="为什么坚持 想一想当初"
+	        android:textSize="@dimen/margin_16"
+	        android:textColor="@color/white"/>
+        
+    </RelativeLayout>
+
+</RelativeLayout>

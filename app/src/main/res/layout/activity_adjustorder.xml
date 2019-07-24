@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/sam_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/sam_nextstep"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="@dimen/margin_16"
+            android:textColor="@drawable/text_color_selector"
+            android:text="下一步"
+            android:layout_gravity="right"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <com.huntkey.software.sceo.widget.ControlEditText
+        android:id="@+id/sam_cet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_below="@+id/sam_toolbar"
+        android:background="@drawable/border_empty"
+        android:padding="@dimen/margin_10"
+        android:hint="扫描待挪动的物料"
+        android:textSize="@dimen/textsize_16"
+        android:textColor="@color/text_color_normal" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/sam_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_5"
+        android:background="@color/gray"
+        android:layout_below="@+id/sam_cet"/>
+
+    <TextView
+        android:id="@+id/sam_emptyview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/sam_cet"
+        android:layout_marginTop="@dimen/margin_5"
+        android:background="@color/gray"
+        android:gravity="center"
+        android:text="扫描待挪动的物料"/>
+
+</RelativeLayout>

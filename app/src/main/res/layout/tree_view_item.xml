@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tree_view_item_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_selector_w2g" >
+    
+    <ImageView 
+        android:id="@+id/tree_view_item_photo"
+        android:layout_width="@dimen/margin_48"
+        android:layout_height="@dimen/margin_48"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_marginBottom="@dimen/margin_5"
+        android:src="@drawable/ic_login_photo"/>
+    
+    <TextView 
+        android:id="@+id/tree_view_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/tree_view_item_photo"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:textSize="@dimen/margin_16"
+        android:textColor="@color/text_color_normal"
+        android:text="嘉源锐信"/>
+    
+    <TextView 
+        android:id="@+id/tree_view_item_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tree_view_item_title"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_5"
+        android:textSize="@dimen/margin_14"
+        android:textColor="@color/text_color_weak"
+        android:text="15060006"
+        android:visibility="gone"/>
+    
+<!--     <ImageView 
+        android:id="@+id/tree_view_item_sms_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/btn_sms"
+        android:visibility="gone"/>
+    
+    <ImageView 
+        android:id="@+id/tree_view_item_phone_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/tree_view_item_sms_btn"
+        android:src="@drawable/btn_phone"
+        android:visibility="gone"/> -->
+    
+    <ImageView 
+        android:id="@+id/tree_view_item_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:fitsSystemWindows="true">
+    
+    <RelativeLayout 
+        android:id="@+id/depart_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"
+        android:background="@color/title_color">
+        
+        <RelativeLayout 
+	        android:id="@+id/depart_title_back"
+	        android:layout_width="@dimen/margin_52"
+	        android:layout_height="match_parent"
+	        android:background="@drawable/bg_selector">
+	        
+		    <ImageView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true"
+		        android:src="@drawable/ic_back"/>
+	        
+	    </RelativeLayout>
+	    
+        <TextView 
+	        android:id="@+id/depart_title_tv"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:paddingRight="@dimen/margin_10"
+	        android:layout_toRightOf="@+id/depart_title_back"
+	        android:gravity="center_vertical"
+	        android:singleLine="true"
+	        android:ellipsize="end"
+	        android:textSize="@dimen/margin_18"
+	        android:textColor="@color/white"
+	        android:text="起始部门"/>
+        
+        <RelativeLayout 
+	        android:id="@+id/depart_title_confirm"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:paddingLeft="@dimen/margin_8"
+	        android:paddingRight="@dimen/margin_8"
+	        android:layout_alignParentRight="true"
+	        android:background="@drawable/bg_selector">
+	        
+			<TextView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true"
+		        android:textSize="@dimen/margin_18"
+	        	android:textColor="@drawable/text_color_selector"
+	        	android:text="确定"/>
+	        
+	    </RelativeLayout>
+        
+    </RelativeLayout>
+    
+    <com.huntkey.software.sceo.widget.TreeViewD
+	    android:id="@+id/depart_tree"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:divider="@color/devide_line"
+	    android:dividerHeight="@dimen/margin_0.5"
+	    android:layout_below="@+id/depart_title"
+	    android:layout_above="@+id/depart_include"/>
+    
+    <com.huntkey.software.sceo.widget.SwitchButton
+        android:id="@+id/depart_include"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:paddingLeft="@dimen/margin_20"
+        android:paddingRight="@dimen/margin_20"
+        android:paddingTop="@dimen/margin_14"
+        android:paddingBottom="@dimen/margin_14"
+        android:layout_alignParentBottom="true"
+        android:text="是否含下级"
+        android:checked="true"
+        app:withTextInterval="@dimen/margin_16"
+       	app:frameDrawable="@drawable/switch_frame"
+       	app:stateDrawable="@drawable/selector_switch_state"
+       	app:stateMaskDrawable="@drawable/switch_state_mask"
+       	app:sliderDrawable="@drawable/selector_switch_slider"/>
+
+</RelativeLayout>

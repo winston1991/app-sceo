@@ -1,0 +1,184 @@
+<com.huntkey.software.sceo.widget.RelativeLayoutAutoHintInputMethod 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/login"
+    android:paddingLeft="@dimen/margin_16"
+    android:paddingRight="@dimen/margin_16"
+    android:background="@drawable/ic_login_bg"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true" >
+    
+    <ImageView 
+        android:id="@+id/login_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_23"
+        android:src="@drawable/ic_login_icon"/>
+    
+    <RelativeLayout 
+        android:id="@+id/login_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_56">
+        
+        <ImageView 
+	        android:id="@+id/login_icon_location"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:src="@drawable/ic_login_location"/>
+        
+        <Spinner
+            android:id="@+id/login_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_3"
+            android:layout_toRightOf="@+id/login_icon_location"
+            android:entries="@array/location_type"
+            android:background="@drawable/ic_login_spinner" />
+        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/login_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_below="@+id/login_layout1">
+        
+        <ImageView 
+            android:id="@+id/login_icon_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_login_account"/>
+        
+        <com.huntkey.software.sceo.widget.LoginClearEditText
+	        android:id="@+id/login_account"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@+id/login_icon_account"
+	        android:paddingLeft="@dimen/margin_12"
+	        android:paddingRight="@dimen/margin_5"
+	        android:paddingTop="@dimen/margin_4"
+	        android:paddingBottom="@dimen/margin_4"
+	        android:layout_centerVertical="true"
+	        android:background="@null"
+	        android:hint="请输入账号"
+	        android:singleLine="true"
+	        android:textColor="@color/text_color_normal"
+	        android:textSize="@dimen/textsize_16"/>
+        
+        <View 
+            style="@style/devide_line_horizontal_1px"
+            android:layout_toRightOf="@+id/login_icon_account"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginLeft="@dimen/margin_3"
+            android:layout_below="@+id/login_account"/>
+        
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/login_layout3" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_below="@+id/login_layout2">
+        
+        <ImageView 
+            android:id="@+id/login_icon_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_login_password"/>
+        
+        <com.huntkey.software.sceo.widget.LoginClearEditText
+	        android:id="@+id/login_pwd"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:password="true"
+	        android:layout_toRightOf="@+id/login_icon_password"
+	        android:paddingLeft="@dimen/margin_12"
+	        android:paddingRight="@dimen/margin_5"
+	        android:paddingTop="@dimen/margin_4"
+	        android:paddingBottom="@dimen/margin_4"
+	        android:layout_centerVertical="true"
+	        android:background="@null"
+	        android:hint="请输入密码"
+	        android:singleLine="true"
+	        android:textColor="@color/text_color_normal"
+	        android:textSize="@dimen/textsize_16"/>
+        
+        <View 
+            style="@style/devide_line_horizontal_1px"
+            android:layout_toRightOf="@+id/login_icon_password"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginLeft="@dimen/margin_3"
+            android:layout_below="@+id/login_pwd"/>
+        
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:id="@+id/login_layout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/margin_48"
+        android:paddingRight="@dimen/margin_36"
+        android:layout_marginTop="@dimen/margin_12"
+        android:layout_below="@+id/login_layout3"
+        android:orientation="horizontal">
+        
+        <CheckBox 
+	        android:id="@+id/login_remember_account"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:text="记住账号"
+	        android:textSize="@dimen/textsize_14"
+	        android:textColor="@color/text_color_normal"
+	        android:paddingLeft="@dimen/margin_10"
+	        style="@style/CustomCheckboxTheme"/>
+        
+        <TextView 
+            android:id="@+id/login_forget_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:textSize="@dimen/textsize_14"
+            android:textColor="@drawable/text_color_selector_b2b"
+            android:text="忘记密码？"/>
+        
+    </LinearLayout>
+    
+    <Button 
+        android:id="@+id/login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_below="@+id/login_layout4"
+        android:background="@drawable/login_btn"
+        android:text="登录"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_18"/>
+    
+	<View 
+	    android:id="@+id/login_toast"
+	    android:layout_width="match_parent"
+	    android:layout_height="2dp"
+	    android:layout_alignParentBottom="true"
+	    android:layout_marginBottom="200dp"/>
+    
+</com.huntkey.software.sceo.widget.RelativeLayoutAutoHintInputMethod>

@@ -1,0 +1,126 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fore_notify"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="@null"
+    android:orientation="horizontal">
+    
+    <RelativeLayout 
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        
+        <ImageView 
+	        android:id="@+id/fore_notif_icon"
+	        android:layout_width="@dimen/margin_36"
+	        android:layout_height="@dimen/margin_36"
+	        android:layout_centerInParent="true"
+	        android:src="@mipmap/ic_launcher"/>
+        
+    </RelativeLayout>
+    
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_line"/>
+    
+    <RelativeLayout 
+        android:id="@+id/fore_notif_invoice_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1">
+        
+        <TextView 
+            android:id="@+id/fore_notify_invoice_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/margin_10"
+            android:text="0"
+            android:gravity="center"
+            android:background="@drawable/ic_circle"/>
+        
+        <TextView 
+            android:id="@+id/fore_notify_invoice_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_2"
+            android:textColor="@color/text_color_normal"
+            android:textSize="@dimen/margin_9"
+            android:layout_below="@+id/fore_notify_invoice_tv"
+            android:layout_centerHorizontal="true"
+            android:text="待审单据"/>
+        
+    </RelativeLayout>
+    
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_line"/>
+    
+    <RelativeLayout 
+        android:id="@+id/fore_notif_affair_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1">
+        
+        <TextView 
+            android:id="@+id/fore_notif_affair_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/margin_10"
+            android:text="0"
+            android:gravity="center"
+            android:background="@drawable/ic_circle"/>
+        
+        <TextView 
+            android:id="@+id/fore_notif_affair_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_2"
+            android:textColor="@color/text_color_normal"
+            android:textSize="@dimen/margin_9"
+            android:layout_below="@+id/fore_notif_affair_tv"
+            android:layout_centerHorizontal="true"
+            android:text="待办事务"/>
+        
+    </RelativeLayout>
+    
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_line"/>
+    
+    <RelativeLayout 
+        android:id="@+id/fore_notif_refresh_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1">
+        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        
+        <TextView 
+	        android:id="@+id/fore_notif_time"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="@dimen/margin_16"
+	        android:layout_marginTop="@dimen/margin_10"
+	        android:textColor="@color/text_color_normal"
+	        android:textSize="@dimen/margin_12"
+	        android:text=""/>
+        
+    </RelativeLayout>
+    
+</LinearLayout>

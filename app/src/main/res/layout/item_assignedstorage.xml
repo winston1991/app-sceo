@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/margin_1"
+    app:cardElevation="@dimen/margin_1"
+    app:cardUseCompatPadding="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_marginBottom="@dimen/margin_5">
+
+        <TextView
+            android:id="@+id/item_ass_sn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize_13"
+            android:text="SN：S13004 10000001"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_ass_sn"
+            android:layout_marginTop="@dimen/margin_7"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_ass_distribution"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/text_color_normal"
+                android:text="分配储位：160301"/>
+
+            <TextView
+                android:id="@+id/item_ass_deposit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/text_color_normal"
+                android:text="存放储位：160305"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/item_ass_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_action_discard_gray"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

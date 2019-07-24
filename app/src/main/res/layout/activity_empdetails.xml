@@ -1,0 +1,137 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/empdetails_layout"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:focusableInTouchMode="true"
+	android:background="@color/background_color"
+	android:fitsSystemWindows="true"
+	android:clipToPadding="true">
+
+    <com.huntkey.software.sceo.widget.BackTitle
+        android:id="@+id/empdetails_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"/>
+    
+    <ScrollView 
+        android:id="@+id/empdetails_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/empdetails_title">
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+            <RelativeLayout 
+		        android:id="@+id/empdetails_layout1"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:padding="@dimen/margin_20">
+		        
+		        <ImageView 
+		            android:id="@+id/empdetails_photo"
+		            android:layout_width="@dimen/margin_72"
+		            android:layout_height="@dimen/margin_72"
+		            android:src="@drawable/ic_login_photo"/>
+		        
+		        <LinearLayout 
+		            android:layout_width="wrap_content"
+		            android:layout_height="match_parent"
+		            android:layout_toRightOf="@+id/empdetails_photo"
+		            android:orientation="vertical"
+		            android:gravity="center_vertical"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="@dimen/margin_20">
+		            
+		            <TextView 
+			            android:id="@+id/empdetails_name"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:textSize="@dimen/margin_18"
+			            android:textColor="@color/text_color_normal"
+			            android:text=""/>
+		            
+		            <TextView 
+		                android:id="@+id/empdetails_code"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_marginTop="@dimen/margin_5"
+		                android:textSize="@dimen/margin_18"
+			            android:textColor="@color/text_color_weak"
+			            android:text=""/>
+		            
+		        </LinearLayout>
+		        
+		        <CheckBox 
+			        android:id="@+id/empdetails_collect"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentRight="true"
+			        android:layout_centerVertical="true"
+			        android:checked="false"
+			        style="@style/CollectCheckboxTheme"/>
+		        
+		    </RelativeLayout>
+		    
+            <ListView 
+                android:id="@+id/empdetails_work_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:background="@drawable/border_corners"/>
+            
+            <ListView 
+                android:id="@+id/empdetails_tel_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:background="@drawable/border_corners"/>
+	        
+	        <Button 
+		        android:id="@+id/empdetails_launch_affairs"
+		        android:layout_width="match_parent"
+		        android:layout_height="@dimen/margin_40"
+		        android:layout_marginTop="@dimen/margin_16"
+		        android:layout_marginLeft="@dimen/margin_10"
+		        android:layout_marginRight="@dimen/margin_10"
+		        android:background="@drawable/login_btn"
+		        android:text="发起待办事务"
+		        android:gravity="center"
+		        android:textColor="@color/white"
+		        android:textSize="@dimen/textsize_18"/>
+	        
+	        <Button 
+		        android:id="@+id/empdetails_launch_sms"
+		        android:layout_width="match_parent"
+		        android:layout_height="@dimen/margin_40"
+		        android:layout_marginTop="@dimen/margin_10"
+		        android:layout_marginLeft="@dimen/margin_10"
+		        android:layout_marginRight="@dimen/margin_10"
+		        android:layout_marginBottom="@dimen/margin_32"
+		        android:background="@drawable/sms_btn"
+		        android:text="发短信"
+		        android:gravity="center"
+		        android:textColor="@color/text_color_normal"
+		        android:textSize="@dimen/textsize_18"
+		        android:visibility="invisible"/>
+            
+        </LinearLayout>
+        
+    </ScrollView>
+     
+    <com.huntkey.software.sceo.widget.ErrorView
+        android:id="@+id/empdetails_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/empdetails_title"
+        app:ev_retryButtonText="@string/error_view_retry"
+        app:ev_retryButtonTextColor="@color/text_color_normal"
+        app:ev_subtitle="@string/error_view_title"/>
+    
+</RelativeLayout>

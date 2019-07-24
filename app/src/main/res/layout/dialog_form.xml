@@ -1,0 +1,13 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_corners" >
+
+    <ListView 
+        android:id="@+id/dialog_form_listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="@color/background_color"
+        android:dividerHeight="@dimen/margin_0.5"/>
+    
+</RelativeLayout>

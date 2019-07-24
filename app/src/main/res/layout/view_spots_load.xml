@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/spots_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <com.huntkey.software.sceo.widget.sportdialog.ProgressLayout
+        android:id="@+id/spots_load_progress"
+        android:layout_width="@dimen/margin_180"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+    
+    <TextView
+        android:id="@+id/spots_load_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/margin_15"
+        android:textColor="@color/text_color_normal"
+        android:text="加载中..."
+        android:layout_above="@+id/spots_load_progress"
+        android:layout_marginBottom="@dimen/margin_10"/>
+    
+</RelativeLayout>

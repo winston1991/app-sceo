@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_outstock_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginBottom="@dimen/margin_1"
+    android:paddingLeft="@dimen/margin_40"
+    android:paddingRight="@dimen/margin_7"
+    android:paddingTop="@dimen/margin_5"
+    android:paddingBottom="@dimen/margin_5">
+
+    <TextView
+        android:id="@+id/item_outstock_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="1.1"/>
+
+    <TextView
+        android:id="@+id/item_outstock_sn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/item_outstock_no"
+        android:layout_marginLeft="@dimen/margin_5"
+        android:text="批号： 12345678"/>
+
+    <ImageView
+        android:id="@+id/item_outstock_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_action_discard_gray"/>
+
+</RelativeLayout>

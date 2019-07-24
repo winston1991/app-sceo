@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/margin_48"
+    android:background="@color/title_color" >
+
+    <RelativeLayout 
+        android:id="@+id/back_title_back"
+        android:layout_width="@dimen/margin_52"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_selector">
+        
+	    <ImageView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerInParent="true"
+	        android:src="@drawable/ic_back"/>
+        
+    </RelativeLayout>
+    
+    <TextView 
+        android:id="@+id/back_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="@dimen/margin_10"
+        android:layout_toRightOf="@+id/back_title_back"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="@dimen/margin_18"
+        android:textColor="@color/white"
+        android:text="详情"/>
+    
+    <RelativeLayout 
+        android:id="@+id/back_title_launch"
+        android:layout_width="@dimen/margin_52"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/bg_selector"
+        android:visibility="gone">
+        
+		<ImageView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerInParent="true"
+	        android:src="@drawable/ic_chat_launch"/>
+        
+    </RelativeLayout>
+
+	<RelativeLayout
+		android:id="@+id/back_title_accessory"
+		android:layout_width="@dimen/margin_52"
+		android:layout_height="match_parent"
+		android:layout_alignParentRight="true"
+		android:background="@drawable/bg_selector"
+		android:visibility="gone">
+
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:src="@drawable/ic_accessory"/>
+
+	</RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/back_title_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/margin_8"
+        android:paddingRight="@dimen/margin_8"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/bg_selector"
+        android:visibility="gone">
+        
+		<TextView 
+		    android:id="@+id/back_title_confirm_tv"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerInParent="true"
+	        android:textSize="@dimen/margin_18"
+        	android:textColor="@drawable/text_color_selector"
+        	android:text="确定"/>
+        
+    </RelativeLayout>
+    
+</RelativeLayout>

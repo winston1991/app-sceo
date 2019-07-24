@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@null">
+
+    <com.huntkey.software.sceo.widget.bottomtab.TabIconView
+        android:id="@+id/main_bottom_tab_icon"
+        android:layout_width="@dimen/margin_32"
+        android:layout_height="@dimen/margin_28"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/main_bottom_tab_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/main_bottom_tab_icon"
+        android:textColor="@color/main_bottom_tab_textcolor_normal"
+        android:textSize="@dimen/textsize_12.5" />
+
+    <TextView
+        android:id="@+id/main_bottom_tab_flag"
+        android:layout_width="@dimen/dp_10"
+        android:layout_height="@dimen/dp_10"
+        android:background="@drawable/ic_remind_me"
+        android:layout_alignRight="@+id/main_bottom_tab_icon"
+        android:layout_marginRight="@dimen/margin_2"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/main_bottom_tab_num"
+        android:layout_width="@dimen/margin_16"
+        android:layout_height="@dimen/margin_16"
+        android:background="@drawable/ic_remind_4"
+        android:layout_alignRight="@+id/main_bottom_tab_icon"
+        android:layout_marginRight="@dimen/margin__2"
+        android:textSize="@dimen/textsize_10"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:visibility="gone"/>
+
+</RelativeLayout>

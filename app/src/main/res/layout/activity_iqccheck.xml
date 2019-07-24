@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huntkey.software.sceo.widget.RelativeLayoutAutoHintInputMethod xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/iqc_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"
+        android:background="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/iqc_tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iqc_toolbar"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_23"
+        android:textSize="@dimen/textsize_16"
+        android:text="待检验条码"/>
+
+    <com.huntkey.software.sceo.widget.ControlEditText
+        android:id="@+id/iqc_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iqc_tv1"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_5"
+        android:background="@drawable/border_empty"
+        android:padding="@dimen/margin_10"
+        android:hint="扫描待检验条码"
+        android:textSize="@dimen/textsize_16"
+        android:textColor="@color/text_color_normal" />
+
+    <TextView
+        android:id="@+id/iqc_tv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iqc_edittext"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_5"
+        android:textSize="@dimen/textsize_16"
+        android:text="校验规则\n1.收货日期容差：N周\n2.系统中存在的条码判断NG"/>
+
+    <ImageView
+        android:id="@+id/iqc_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/iqc_tv2"
+        android:layout_marginTop="@dimen/margin_32"
+        android:src="@drawable/ic_iqc_no"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/iqc_checkresult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_below="@+id/iqc_imageview"
+        android:layout_marginTop="@dimen/margin_10"
+        android:textSize="@dimen/textsize_16"
+        android:textColor="@color/text_color_normal"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/iqc_check_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_below="@+id/iqc_checkresult"
+        android:background="@drawable/login_btn"
+        android:text="校验"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_18"/>
+
+</com.huntkey.software.sceo.widget.RelativeLayoutAutoHintInputMethod>

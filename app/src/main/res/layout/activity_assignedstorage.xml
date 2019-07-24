@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:fab="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/assistor_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/assistor_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:paddingRight="@dimen/margin_10"
+            android:paddingTop="@dimen/margin_15"
+            android:paddingBottom="@dimen/margin_15"
+            android:textSize="@dimen/textsize_14"
+            android:textColor="@color/white"
+            android:text=""/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/assistor_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_below="@+id/assistor_toolbar"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/assistor_job"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/text_color_normal"
+            android:textSize="@dimen/textsize_14"
+            android:text="任务："/>
+
+        <TextView
+            android:id="@+id/assistor_num"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/text_color_normal"
+            android:textSize="@dimen/textsize_14"
+            android:gravity="right"
+            android:text="单号："/>
+
+    </LinearLayout>
+
+    <com.huntkey.software.sceo.widget.ControlEditText
+        android:id="@+id/assistor_cet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_below="@+id/assistor_layout1"
+        android:background="@drawable/border_empty"
+        android:padding="@dimen/margin_10"
+        android:hint="先扫描储位再连续扫描存放的箱号"
+        android:textSize="@dimen/textsize_16"
+        android:textColor="@color/text_color_normal" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/assistor_refreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_below="@+id/assistor_cet">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/assistor_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/assistor_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_submit"
+        fab:fab_colorNormal="@color/colorPrimary"
+        fab:fab_colorPressed="@color/colorPrimaryDark"
+        fab:fab_colorRipple="@color/colorAccent"/>
+
+</RelativeLayout>

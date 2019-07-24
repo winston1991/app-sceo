@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huntkey.software.sceo.widget.RelativeLayoutAutoHintInputMethod xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/ebc_c_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"
+        android:background="@color/colorPrimary"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ebc_c_toolbar"
+            android:layout_margin="@dimen/margin_16">
+
+            <LinearLayout
+                android:id="@+id/ebc_c_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/textsize_14"
+                    android:textColor="@color/main_bottom_tab_textcolor_normal"
+                    android:text="供应商"/>
+
+                <TextView
+                    android:id="@+id/ebc_c_addr"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:textSize="@dimen/textsize_16"
+                    android:textColor="@color/text_color_normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ebc_c_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ebc_c_layout1"
+                android:layout_marginTop="@dimen/margin_16"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/textsize_14"
+                    android:textColor="@color/main_bottom_tab_textcolor_normal"
+                    android:text="收货单号"/>
+
+                <TextView
+                    android:id="@+id/ebc_c_nbr"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:textSize="@dimen/textsize_16"
+                    android:textColor="@color/text_color_normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ebc_c_layout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_below="@+id/ebc_c_layout2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/textsize_14"
+                    android:textColor="@color/main_bottom_tab_textcolor_normal"
+                    android:text="料号"/>
+
+                <TextView
+                    android:id="@+id/ebc_c_part"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:textSize="@dimen/textsize_16"
+                    android:textColor="@color/text_color_normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ebc_c_layout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_below="@+id/ebc_c_layout3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/textsize_14"
+                    android:textColor="@color/main_bottom_tab_textcolor_normal"
+                    android:text="生产周期"/>
+
+                <com.huntkey.software.sceo.widget.ClearEditText
+                    android:id="@+id/ebc_c_dc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:background="@drawable/border_empty"
+                    android:padding="@dimen/margin_7"
+                    android:singleLine="true"
+                    android:hint="输入生产周期（格式YYMM）"
+                    android:textSize="@dimen/textsize_16"
+                    android:textColor="@color/text_color_normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ebc_c_layout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_below="@+id/ebc_c_layout4"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/textsize_14"
+                    android:textColor="@color/main_bottom_tab_textcolor_normal"
+                    android:text="数量"/>
+
+                <com.huntkey.software.sceo.widget.ClearEditText
+                    android:id="@+id/ebc_c_qty"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:singleLine="true"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/border_empty"
+                    android:padding="@dimen/margin_7"
+                    android:hint="输入数量"
+                    android:textSize="@dimen/textsize_16"
+                    android:textColor="@color/text_color_normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ebc_c_layout6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_below="@+id/ebc_c_layout5"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:textSize="@dimen/textsize_14"
+                        android:textColor="@color/main_bottom_tab_textcolor_normal"
+                        android:text="最小包装"/>
+
+                    <com.huntkey.software.sceo.widget.ClearEditText
+                        android:id="@+id/ebc_c_min_pack"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:singleLine="true"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/border_empty"
+                        android:padding="@dimen/margin_7"
+                        android:hint="输入包装"
+                        android:textSize="@dimen/textsize_16"
+                        android:textColor="@color/text_color_normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:textSize="@dimen/textsize_14"
+                        android:textColor="@color/main_bottom_tab_textcolor_normal"
+                        android:text="每箱包数"/>
+
+                    <com.huntkey.software.sceo.widget.ClearEditText
+                        android:id="@+id/ebc_c_box"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/border_empty"
+                        android:padding="@dimen/margin_7"
+                        android:singleLine="true"
+                        android:inputType="numberDecimal"
+                        android:hint="输入包数"
+                        android:textSize="@dimen/textsize_16"
+                        android:textColor="@color/text_color_normal" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ebc_c_layout7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_below="@+id/ebc_c_layout6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/textsize_14"
+                    android:textColor="@color/main_bottom_tab_textcolor_normal"
+                    android:text="批次"/>
+
+                <com.huntkey.software.sceo.widget.ClearEditText
+                    android:id="@+id/ebc_c_lot"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:singleLine="true"
+                    android:background="@drawable/border_empty"
+                    android:padding="@dimen/margin_7"
+                    android:hint="输入供应商批次"
+                    android:textSize="@dimen/textsize_16"
+                    android:textColor="@color/text_color_normal" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/ebc_c_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40"
+                android:layout_marginTop="@dimen/margin_23"
+                android:layout_below="@+id/ebc_c_layout7"
+                android:background="@drawable/login_btn"
+                android:text="加入打印队列"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_18"/>
+
+            <Button
+                android:id="@+id/ebc_c_close"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_below="@+id/ebc_c_btn"
+                android:background="@drawable/login_btn"
+                android:text="返回"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_18"/>
+
+        </RelativeLayout>
+
+</com.huntkey.software.sceo.widget.RelativeLayoutAutoHintInputMethod>

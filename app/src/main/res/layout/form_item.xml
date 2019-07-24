@@ -1,0 +1,122 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_selector_w2g" >
+    
+    <LinearLayout
+        android:id="@+id/nameLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:paddingLeft="@dimen/margin_5"
+        android:paddingTop="@dimen/margin_5"
+    	android:paddingBottom="@dimen/margin_5"
+        android:orientation="vertical">
+        
+        <TextView 
+            android:id="@+id/form_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/margin_14"
+            android:textColor="@color/text_color_normal"
+            android:text="职员社保"/>
+        
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_3"
+            android:layout_weight="1">
+            
+            <ImageView 
+		        android:id="@+id/form_item_iv"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerVertical="true"
+		        android:src="@drawable/ic_hassub"
+		        android:visibility="visible"/>
+            
+            <TextView 
+	            android:id="@+id/form_item_depart"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_toRightOf="@+id/form_item_iv"
+	            android:textSize="@dimen/margin_12"
+	            android:textColor="@color/text_color_weak"
+	            android:text="嘉源锐信"/>
+            
+        </RelativeLayout>
+        
+    </LinearLayout>
+    
+    <View 
+        android:layout_width="@dimen/margin_0.5"
+        android:layout_height="match_parent"
+        android:background="@color/background_color"/>
+    
+    <TextView 
+        android:id="@+id/form_item_new"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:paddingRight="@dimen/margin_2"
+        android:layout_gravity="center"
+        android:gravity="right"
+        android:textColor="@color/text_color_normal"
+        android:textSize="@dimen/margin_14"
+        android:text="昨日"/>
+    
+    <View 
+        android:layout_width="@dimen/margin_0.5"
+        android:layout_height="match_parent"
+        android:background="@color/background_color"
+        android:visibility="gone"/>
+    
+    <TextView 
+        android:id="@+id/form_item_week"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:paddingRight="@dimen/margin_2"
+        android:layout_gravity="center"
+        android:gravity="right"
+        android:textColor="@color/text_color_normal"
+        android:textSize="@dimen/margin_14"
+        android:text="当周"
+        android:visibility="gone"/>
+    
+    <View 
+        android:layout_width="@dimen/margin_0.5"
+        android:layout_height="match_parent"
+        android:background="@color/background_color"/>
+    
+    <TextView 
+        android:id="@+id/form_item_month"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:paddingRight="@dimen/margin_2"
+        android:layout_gravity="center"
+        android:gravity="right"
+        android:textColor="@color/text_color_normal"
+        android:textSize="@dimen/margin_14"
+        android:text="当月"/>
+    
+    <View 
+        android:layout_width="@dimen/margin_0.5"
+        android:layout_height="match_parent"
+        android:background="@color/background_color"/>
+    
+    <TextView 
+        android:id="@+id/form_item_year"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:paddingRight="@dimen/margin_2"
+        android:layout_gravity="center"
+        android:gravity="right"
+        android:textColor="@color/text_color_normal"
+        android:textSize="@dimen/margin_14"
+        android:text="财年"/>
+    
+</LinearLayout>

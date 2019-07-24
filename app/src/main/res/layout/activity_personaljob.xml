@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/pj_toolbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/pj_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_48"
+            android:background="@color/colorPrimary">
+
+            <RadioGroup
+                android:id="@+id/pj_rg"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:layout_width="@dimen/margin_180"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/pj_rb_out"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:text="扫码出"
+                    android:checked="true"
+                    android:textSize="@dimen/textsize_14"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/margin_5"
+                    android:paddingBottom="@dimen/margin_5"
+                    android:textColor="@color/title_text_sel"
+                    android:background="@drawable/rb_bg_01"/>
+
+                <RadioButton
+                    android:id="@+id/pj_rb_out_no"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:text="非扫码出"
+                    android:textSize="@dimen/textsize_14"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/margin_5"
+                    android:paddingBottom="@dimen/margin_5"
+                    android:textColor="@color/title_text_sel"
+                    android:background="@drawable/rb_bg_03"/>
+
+                <RadioButton
+                    android:id="@+id/pj_rb_in"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="入库"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textSize="@dimen/textsize_14"
+                    android:paddingTop="@dimen/margin_5"
+                    android:paddingBottom="@dimen/margin_5"
+                    android:textColor="@color/title_text_sel"
+                    android:background="@drawable/rb_bg_02"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/pj_checkall"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="@dimen/margin_16"
+                android:textColor="@drawable/text_color_selector"
+                android:text="全选"
+                android:layout_gravity="right"
+                android:paddingLeft="@dimen/margin_5"
+                android:paddingRight="@dimen/margin_5"/>
+
+        </android.support.v7.widget.Toolbar>
+
+        <com.miguelcatalan.materialsearchview.MaterialSearchView
+            android:id="@+id/pj_search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/pj_chooseBtns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/pj_toolbar_container">
+
+        <Button
+            android:id="@+id/pj_order"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_32"
+            android:text="制令发料"
+            android:background="@null"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/pj_other"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_32"
+            android:text="其他单据"
+            android:background="@null"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pj_line_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1"
+        android:layout_below="@+id/pj_chooseBtns">
+
+        <View
+            android:id="@+id/pj_line"
+            android:layout_width="@dimen/margin_180"
+            android:layout_height="match_parent"
+            android:background="@color/red_btn_bg_color"/>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/pj_refreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/pj_line_layout">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/pj_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/pj_float_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        fab:menu_labels_style="@style/MenuLabelsStyle"
+        fab:menu_labels_showAnimation="@anim/jump_from_down"
+        fab:menu_labels_hideAnimation="@anim/jump_to_down"
+        fab:menu_animationDelayPerItem="0"
+        fab:menu_colorNormal="@color/colorPrimary"
+        fab:menu_colorPressed="@color/colorPrimaryDark"
+        fab:menu_colorRipple="@color/colorAccent">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/pj_combine_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_floating_combine"
+            fab:fab_label="合并"
+            style="@style/MenuButtonsStyle" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/pj_split_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_floating_split"
+            fab:fab_label="拆分"
+            style="@style/MenuButtonsStyle" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>

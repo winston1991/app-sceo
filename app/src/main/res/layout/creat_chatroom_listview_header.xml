@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/margin_48"
+    android:background="@color/white" >
+
+    <TextView 
+        android:id="@+id/creat_chatroom_header_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_16"
+        android:paddingBottom="@dimen/margin_16"
+        android:background="@drawable/bg_selector_w2g"
+		android:gravity="center_vertical"
+		android:paddingLeft="@dimen/margin_16"        
+        android:textSize="@dimen/margin_16"
+        android:textColor="@color/text_color_normal"
+        android:text="选择企业联系人"/>
+    
+</RelativeLayout>

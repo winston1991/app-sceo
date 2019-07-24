@@ -1,0 +1,160 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout 
+        android:id="@+id/common_heder_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_2"
+        android:paddingTop="@dimen/margin_2"
+        android:orientation="horizontal">
+        
+        <TextView 
+	        android:id="@+id/common_header_tv1"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:textSize="@dimen/margin_14"
+	        android:textColor="@color/text_color_normal"
+	        android:text="日值：21.00"/>
+        
+        <TextView 
+	        android:id="@+id/common_header_tv10"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="2"
+	        android:textSize="@dimen/margin_14"
+	        android:textColor="@color/text_color_normal"
+	        android:text="更新时间：00:00"/>
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/common_heder_layout1_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_2"
+        android:orientation="horizontal">
+        
+        <TextView 
+	        android:id="@+id/common_header_tv11"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:textSize="@dimen/margin_14"
+	        android:textColor="@color/text_color_normal"
+	        android:text="周值：21.00"/>
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/common_heder_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_2"
+        android:orientation="horizontal">
+        
+        <TextView 
+	        android:id="@+id/common_header_tv2"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:textSize="@dimen/margin_14"
+	        android:textColor="@color/text_color_normal"
+	        android:text="月值：21.00"/>
+        
+        <TextView 
+	        android:id="@+id/common_header_tv3"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:textSize="@dimen/margin_14"
+	        android:textColor="@color/text_color_normal"
+	        android:text="同比%：21.0"/>
+        
+        <TextView 
+	        android:id="@+id/common_header_tv4"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:textSize="@dimen/margin_14"
+	        android:textColor="@color/text_color_normal"
+	        android:text="环比%：21.0"/>
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/common_heder_layout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_2"
+        android:orientation="horizontal">
+        
+        <TextView 
+            android:id="@+id/common_header_tv5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/margin_14"
+            android:textColor="@color/text_color_normal"
+            android:text="财年：21.00"/>
+        
+        <TextView 
+            android:id="@+id/common_header_tv6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/margin_14"
+            android:textColor="@color/text_color_normal"
+            android:text="同比%：21.0"/>
+        
+        <TextView 
+            android:id="@+id/common_header_tv7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/margin_14"
+            android:textColor="@color/text_color_normal"
+            android:text="完成%：21.0"/>
+        
+    </LinearLayout>
+    
+    <!--<LinearLayout
+        android:id="@+id/common_heder_layout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/common_header_tv8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/margin_14"
+            android:textColor="@color/text_color_normal"
+            android:text="规划：统计：21.00"/>
+
+        <TextView
+            android:id="@+id/common_header_tv9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/margin_14"
+            android:textColor="@color/text_color_normal"
+            android:text="同比%：21.0"/>
+
+    </LinearLayout>-->
+    
+</LinearLayout>

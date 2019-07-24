@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/background_color" >
+
+    <com.huntkey.software.sceo.widget.BackTitle
+        android:id="@+id/gesture_edit_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"/>
+    
+    <LinearLayout 
+        android:id="@+id/gesture_edit_tip_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gesture_edit_title"
+        android:gravity="center"
+        android:orientation="vertical">
+        
+        <com.huntkey.software.sceo.widget.gesturelock.LockIndicator
+            android:id="@+id/gesture_edit_lock_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"/>
+        
+        <TextView 
+            android:id="@+id/gesture_edit_text_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="绘制解锁图案"
+            android:textColor="@color/text_color_weak"
+            android:layout_marginTop="@dimen/margin_10"/>
+        
+    </LinearLayout>
+    
+    <FrameLayout 
+        android:id="@+id/gesture_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gesture_edit_tip_layout"
+        android:layout_marginTop="@dimen/margin_20">
+        
+    </FrameLayout>
+    
+    <TextView 
+        android:id="@+id/gesture_text_reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/gesture_container"
+        android:layout_marginTop="@dimen/margin_20"
+        android:textColor="@color/title_color"
+        android:text="设置手势密码，防止他人未经授权查看"/>
+    
+</RelativeLayout>

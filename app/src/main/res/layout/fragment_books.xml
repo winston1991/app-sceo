@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:background="@color/background_color"
+	android:fitsSystemWindows="true"
+	android:clipToPadding="true">
+
+<!-- 	<com.huntkey.software.sceo.widget.MainTitle
+	    android:id="@+id/books_title"
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/margin_48"/> -->
+	<com.huntkey.software.sceo.widget.BackTitle
+        android:id="@+id/books_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"/>
+	
+	<RelativeLayout 
+	    android:id="@+id/books_search_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/books_title"
+	    android:background="@color/white">
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:paddingTop="@dimen/margin_10"
+	        android:paddingBottom="@dimen/margin_10"
+	        android:paddingLeft="@dimen/margin_16"
+	        android:drawableLeft="@drawable/ic_search"
+	        android:drawablePadding="@dimen/margin_10"
+	        android:textSize="@dimen/margin_14"
+	        android:textColor="@color/text_color_weak"
+	        android:text="工号/姓名/部门"/>
+	    
+	</RelativeLayout>
+
+	<com.huntkey.software.sceo.widget.TreeView
+	    android:id="@+id/books_tree"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:divider="@color/devide_line"
+	    android:dividerHeight="@dimen/margin_0.5"
+	    android:layout_marginTop="@dimen/margin_10"
+	    android:layout_below="@+id/books_search_layout"/>
+
+    <com.huntkey.software.sceo.widget.ErrorView
+        android:id="@+id/books_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/books_title"
+        app:ev_retryButtonText="@string/error_view_retry"
+        app:ev_retryButtonTextColor="@color/text_color_normal"
+        app:ev_subtitle="@string/error_view_title"/>
+    
+</RelativeLayout>

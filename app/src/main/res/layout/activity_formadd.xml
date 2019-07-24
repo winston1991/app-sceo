@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white">
+    
+    <com.huntkey.software.sceo.widget.BackTitle
+        android:id="@+id/formadd_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"/>
+    
+    <LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_below="@+id/formadd_title"
+	    android:orientation="horizontal" >
+	    
+	    <ListView 
+	        android:id="@+id/formadd_list_left"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="2"
+	        android:divider="#d0d0d0"
+	        android:dividerHeight="@dimen/margin_0.5"
+	        android:cacheColorHint="#00000000"/>
+	    
+	    <ListView 
+	        android:id="@+id/formadd_list_right"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="5"
+	        android:divider="#d0d0d0"
+	        android:dividerHeight="@dimen/margin_0.5"
+	        android:cacheColorHint="#00000000"/>
+	    
+	</LinearLayout>
+    
+</RelativeLayout>

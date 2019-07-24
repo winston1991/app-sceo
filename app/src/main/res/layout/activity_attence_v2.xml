@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/attence_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"
+        android:background="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/attence_judgeloc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/attence_toolbar"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:textSize="@dimen/textsize_14"
+        android:textColor="@color/text_color_deep_weak"
+        android:text="提示："/>
+
+    <TextView
+        android:id="@+id/attence_standardtime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/attence_judgeloc"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:textSize="@dimen/textsize_14"
+        android:textColor="@color/text_color_deep_weak"
+        android:text="打卡记录时间和位置"/>
+
+    <View
+        android:id="@+id/attence_line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1"
+        android:layout_below="@+id/attence_standardtime"
+        android:background="@color/devide_line"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/attence_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_1"
+        android:layout_below="@+id/attence_line1"/>
+
+</RelativeLayout>

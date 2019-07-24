@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/pp_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"
+        android:background="@color/colorPrimary">
+
+        <RadioGroup
+            android:id="@+id/pp_rg"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:layout_width="@dimen/margin_140"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/pp_rb_no"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:text="未打印"
+                android:checked="true"
+                android:textSize="@dimen/textsize_14"
+                android:gravity="center"
+                android:paddingTop="@dimen/margin_5"
+                android:paddingBottom="@dimen/margin_5"
+                android:textColor="@color/title_text_sel"
+                android:background="@drawable/rb_bg_01"/>
+
+            <RadioButton
+                android:id="@+id/pp_rb_yes"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="已打印"
+                android:button="@null"
+                android:gravity="center"
+                android:textSize="@dimen/textsize_14"
+                android:paddingTop="@dimen/margin_5"
+                android:paddingBottom="@dimen/margin_5"
+                android:textColor="@color/title_text_sel"
+                android:background="@drawable/rb_bg_02"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/pp_checkall"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="@dimen/margin_16"
+            android:textColor="@drawable/text_color_selector"
+            android:text="全选"
+            android:layout_gravity="right"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:id="@+id/pp_line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_0.1"
+        android:background="@color/devide_line"
+        android:layout_above="@+id/pp_bottomlayout"/>
+
+    <LinearLayout
+        android:id="@+id/pp_bottomlayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+        
+        <Spinner
+            android:id="@+id/pp_spinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:paddingLeft="@dimen/margin_5"
+            android:paddingRight="@dimen/margin_5"
+            android:paddingTop="@dimen/margin_2"
+            android:paddingBottom="@dimen/margin_2"/>
+
+        <Button
+            android:id="@+id/pp_print_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_centerInParent="true"
+            android:background="@color/colorAccent"
+            android:text="打印"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/pp_refreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/pp_toolbar"
+        android:layout_above="@+id/pp_line1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/pp_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

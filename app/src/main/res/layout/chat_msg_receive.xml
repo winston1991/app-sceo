@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView 
+        android:id="@+id/chat_msg_time"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_20"
+        android:paddingLeft="@dimen/margin_5"
+        android:paddingRight="@dimen/margin_5"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/border_corners_gray"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/margin_12"
+        android:text="5月14日 晚上19:40"/>
+    
+    <TextView 
+        android:id="@+id/chat_msg_system"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_below="@+id/chat_msg_time"
+        android:paddingLeft="@dimen/margin_5"
+        android:paddingRight="@dimen/margin_5"
+        android:paddingTop="@dimen/margin_3"
+        android:paddingBottom="@dimen/margin_3"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/border_corners_gray"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/margin_12"
+        android:text="系统"
+        android:visibility="gone"/>
+    
+    <RelativeLayout 
+        android:id="@+id/chat_msg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_below="@+id/chat_msg_time">
+        
+        <ImageView 
+	        android:id="@+id/chat_msg_img"
+	        android:layout_width="@dimen/margin_48"
+	        android:layout_height="@dimen/margin_48"
+	        android:layout_marginLeft="@dimen/margin_10"
+	        android:scaleType="fitXY"
+	        android:src="@drawable/ic_login_photo"/>
+	    
+	    <TextView 
+	        android:id="@+id/chat_msg_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@+id/chat_msg_img"
+	        android:layout_alignTop="@+id/chat_msg_img"
+	        android:layout_marginLeft="@dimen/margin_10"
+	        android:textSize="@dimen/margin_12"
+	        android:textColor="@color/text_color_weak"
+	        android:text="陈梁"/>
+	    
+	    <RelativeLayout 
+	        android:id="@+id/chat_msg_gotoweb"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="@dimen/margin_48"
+	        android:layout_toRightOf="@+id/chat_msg_img"
+	        android:layout_below="@+id/chat_msg_name">
+	        
+	        <RelativeLayout 
+		        android:id="@+id/chat_msg_layout2"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/ic_chatfrom_bg_normal">
+		        
+		        <ImageView 
+		            android:id="@+id/chat_msg_content_link"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="@dimen/margin_5"
+		            android:src="@drawable/ic_link"
+		            android:visibility="gone"/>
+		        
+		        <TextView 
+		            android:id="@+id/chat_msg_content"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="@dimen/margin_5"
+		            android:layout_toRightOf="@+id/chat_msg_content_link"
+		            android:layout_centerVertical="true"
+		            android:textSize="@dimen/margin_15"
+		        	android:textColor="@color/text_color_normal"
+		        	android:text="测试"/>
+		        
+		    </RelativeLayout>
+		    
+		    <ProgressBar 
+		        android:id="@+id/chat_msg_progressbar"
+		        style="@android:style/Widget.ProgressBar"
+		        android:layout_width="@dimen/margin_23"
+		        android:layout_height="@dimen/margin_23"
+		        android:layout_centerVertical="true"
+		        android:layout_toRightOf="@+id/chat_msg_layout2"
+		        android:indeterminate="false"
+		        android:visibility="visible"
+		        android:indeterminateDrawable="@drawable/progress_bar_loading"/>
+		    
+		    <ImageView 
+		        android:id="@+id/chat_msg_resend"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:src="@drawable/ic_msg_resend"
+		        android:layout_centerVertical="true"
+		        android:layout_toRightOf="@+id/chat_msg_layout2"
+		        android:visibility="invisible"/>
+		    
+	    </RelativeLayout>
+        
+    </RelativeLayout>
+    
+</RelativeLayout>

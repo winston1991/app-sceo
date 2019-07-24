@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/margin_12"
+    android:paddingBottom="@dimen/margin_12"
+    android:paddingLeft="@dimen/margin_10"
+    android:paddingRight="@dimen/margin_10"
+    android:background="@drawable/bg_selector_w2g" >
+    
+    <TextView 
+        android:id="@+id/form_adapter_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_3"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/margin_14"
+        android:textColor="@color/text_color_weak"
+        android:text="06/15 9:21"/>
+    
+    <TextView 
+        android:id="@+id/form_adapter_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/form_adapter_item_time"
+        android:layout_marginRight="@dimen/margin_10"
+        android:gravity="left"
+        android:layout_alignParentLeft="true"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textSize="@dimen/margin_18"
+        android:textColor="@color/text_color_normal"
+        android:text="销售管理"/>
+    
+    <TextView 
+        android:id="@+id/form_adapter_item_explain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_below="@+id/form_adapter_item_time"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textSize="@dimen/margin_15"
+        android:textColor="@color/text_color_weak"
+        android:text="说明：请原谅我的自负，没人能说没人可说好难承受"/>
+    
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical" >
+
+    <TextView 
+        android:id="@+id/item_tmp_leftTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:paddingTop="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_10"
+        android:textSize="@dimen/margin_15"
+        android:textColor="@color/text_color_weak"
+        android:text="职责:"/>
+    
+    <TextView 
+        android:id="@+id/item_tmp_rightTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_10"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:layout_marginRight="@dimen/margin_10"
+        android:textSize="@dimen/margin_15"
+        android:textColor="@color/text_color_normal"
+        android:text="总监"/>
+    
+</LinearLayout>

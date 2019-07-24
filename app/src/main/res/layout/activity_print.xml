@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/print_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/btn_print"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="@dimen/margin_16"
+            android:textColor="@drawable/text_color_selector"
+            android:text="打印"
+            android:layout_gravity="right"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/print_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_below="@+id/print_toolbar"
+        android:paddingLeft="@dimen/margin_16"
+        android:paddingRight="@dimen/margin_16"
+        android:paddingTop="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_10"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/print_bt_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/main_bottom_tab_textcolor_normal"
+            android:textSize="@dimen/textsize_18"
+            android:text="关闭"/>
+
+        <Switch
+            android:id="@+id/print_bt_switch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/print_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_selector_w2g"
+        android:layout_below="@+id/print_layout1"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin_16"
+        android:paddingTop="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_10"
+        android:paddingLeft="@dimen/margin_16"
+        android:paddingRight="@dimen/margin_16">
+
+        <TextView
+            android:id="@+id/print_bind_device"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:textColor="@color/main_bottom_tab_textcolor_normal"
+            android:textSize="@dimen/textsize_18"
+            android:text="已绑定蓝牙：P58A+"/>
+
+        <ImageView
+            android:id="@+id/bluetooth_switch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_arrow_right"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/print_layout2"
+        android:layout_marginTop="@dimen/margin_16">
+
+        <LinearLayout
+            android:id="@+id/print_layout_print"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"/>
+
+    </ScrollView>
+
+</RelativeLayout>

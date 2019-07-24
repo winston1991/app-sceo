@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_80"
+    android:layout_marginLeft="@dimen/margin_5"
+    android:layout_marginRight="@dimen/margin_5">
+
+    <View
+        android:layout_width="@dimen/margin_1"
+        android:layout_height="@dimen/margin_80"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:background="@color/devide_line"/>
+
+    <ImageView
+        android:id="@+id/item_attence_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:src="@drawable/ic_sign_in"/>
+
+    <TextView
+        android:id="@+id/item_attence_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_40"
+        android:textColor="@color/text_color_normal"
+        android:textSize="@dimen/textsize_14"
+        android:layout_marginTop="@dimen/margin_1"
+        android:text="打卡时间17:00"/>
+
+    <TextView
+        android:id="@+id/item_attence_addr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_attence_time"
+        android:layout_marginLeft="@dimen/margin_40"
+        android:layout_marginTop="@dimen/margin_10"
+        android:drawableLeft="@drawable/ic_sign_location"
+        android:gravity="center_vertical"
+        android:drawablePadding="@dimen/margin_2"
+        android:text="安徽省合肥市蜀山区临湖社区管理管委会习友路"/>
+
+</RelativeLayout>

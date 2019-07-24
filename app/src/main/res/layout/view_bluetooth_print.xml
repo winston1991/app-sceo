@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_btp_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_selector_w2g">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="7"
+        android:paddingLeft="@dimen/margin_10"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/view_btp_splname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize_14"
+            android:textColor="@color/text_color_normal"
+            android:text="供应商"/>
+
+        <TextView
+            android:id="@+id/view_btp_pn"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/textsize_14"
+            android:textColor="@color/text_color_normal"
+            android:text="P/N: 110-3613010RB"/>
+
+        <TextView
+            android:id="@+id/view_btp_dc"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/textsize_14"
+            android:textColor="@color/text_color_normal"
+            android:text="DC: 1634"/>
+
+        <TextView
+            android:id="@+id/view_btp_vd"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/textsize_14"
+            android:textColor="@color/text_color_normal"
+            android:text="VD: S13005"/>
+
+        <TextView
+            android:id="@+id/view_btp_sn"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/textsize_14"
+            android:textColor="@color/text_color_normal"
+            android:text="SN: 1000 0003"/>
+
+        <TextView
+            android:id="@+id/view_btp_qty"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/textsize_14"
+            android:textColor="@color/text_color_normal"
+            android:text="QTY: 5000"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/view_btp_qr"
+            android:layout_width="@dimen/margin_110"
+            android:layout_height="@dimen/margin_110" />
+
+        <TextView
+            android:id="@+id/view_btp_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_1"
+            android:textSize="@dimen/textsize_14"
+            android:textColor="@color/text_color_normal"
+            android:text="ID: 06021527"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/margin_2"
+    android:paddingBottom="@dimen/margin_12"
+    android:paddingLeft="@dimen/margin_2"
+    android:paddingRight="@dimen/margin_2"
+    android:layout_marginLeft="@dimen/margin_2"
+    android:layout_marginRight="@dimen/margin_2"
+    android:background="@drawable/ic_marker" >
+    
+    <TextView 
+        android:id="@+id/marker_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_2"
+        android:textSize="@dimen/margin_12"
+        android:textColor="@color/white"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="111"/>
+    
+    <TextView 
+        android:id="@+id/marker_gh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/marker_time"
+        android:textSize="@dimen/margin_12"
+        android:textColor="@android:color/black"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="222"/>
+    
+    <TextView 
+        android:id="@+id/marker_tj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/marker_gh"
+        android:textSize="@dimen/margin_12"
+        android:textColor="#FE0200"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="333"/>
+    
+    <TextView 
+        android:id="@+id/marker_tb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/marker_tj"
+        android:textSize="@dimen/margin_12"
+        android:textColor="#1400F9"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="444"/>
+
+</RelativeLayout>

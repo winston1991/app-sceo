@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_outstock_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginBottom="@dimen/margin_1"
+    android:paddingLeft="@dimen/margin_10"
+    android:paddingRight="@dimen/margin_10"
+    android:paddingTop="@dimen/margin_5"
+    android:paddingBottom="@dimen/margin_5">
+
+    <TextView
+        android:id="@+id/item_outstock_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="1"/>
+
+    <LinearLayout
+        android:id="@+id/item_outstock_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_toRightOf="@+id/item_outstock_num">
+
+        <TextView
+            android:id="@+id/item_outstock_part"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:textColor="@color/text_color_normal"
+            android:text="料号：1103613010RB"/>
+
+        <TextView
+            android:id="@+id/item_outstock_flag"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/text_color_normal"
+            android:text=""/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_outstock_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_outstock_layout2"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_toRightOf="@+id/item_outstock_num">
+
+        <TextView
+            android:id="@+id/item_outstock_need"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:textColor="@color/text_color_normal"
+            android:text="需求量：5000"/>
+
+        <TextView
+            android:id="@+id/item_outstock_actual"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:textColor="@color/text_color_normal"
+            android:text="点数量：5010"/>
+
+    </LinearLayout>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_outstock_layout1"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_toRightOf="@+id/item_outstock_num">
+
+        <TextView
+            android:id="@+id/item_outstock_begin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:textColor="@color/text_color_normal"
+            android:text="期初超发：5000"/>
+
+        <TextView
+            android:id="@+id/item_outstock_final"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:textColor="@color/text_color_normal"
+            android:text="期末超发：5010"/>
+
+    </LinearLayout>-->
+
+    <ImageView
+        android:id="@+id/item_outstock_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_arrow_right"/>
+
+</RelativeLayout>

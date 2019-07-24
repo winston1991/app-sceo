@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/a_circle_btn"
+        android:layout_width="@dimen/margin_140"
+        android:layout_height="@dimen/margin_140"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_special_disease_circle">
+
+        <TextView
+            android:id="@+id/a_circle_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_50"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_18"
+            android:text="打卡签到"/>
+
+        <TextView
+            android:id="@+id/a_circle_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/a_circle_tv1"
+            android:layout_marginTop="@dimen/margin_5"
+            android:textSize="@dimen/textsize_16"
+            android:textColor="@color/deep_blue"
+            android:text="00:00"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:paddingBottom="@dimen/margin_8"
+    android:paddingTop="@dimen/margin_8"
+    android:paddingLeft="@dimen/margin_16"
+    android:paddingRight="@dimen/margin_16"
+    android:gravity="center_vertical"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/btn_adapter_bt_has_bond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:gravity="center"
+        android:paddingBottom="@dimen/margin_8"
+        android:paddingLeft="@dimen/margin_16"
+        android:paddingRight="@dimen/margin_16"
+        android:paddingTop="@dimen/margin_8"
+        android:textColor="@color/text_color_normal"/>
+
+    <TextView
+        android:id="@+id/txt_adapter_bt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/btn_adapter_bt_has_bond"
+        android:textColor="@color/text_color_normal"
+        android:textSize="@dimen/textsize_18"/>
+
+    <TextView
+        android:id="@+id/txt_adapter_bt_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_adapter_bt_name"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_toLeftOf="@id/btn_adapter_bt_has_bond"
+        android:textColor="@color/text_color_normal"/>
+
+</RelativeLayout>

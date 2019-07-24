@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/formadd_right_item_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_selector_w2g" >
+
+    <TextView 
+        android:id="@+id/formadd_right_item_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color_normal"
+        android:textSize="@dimen/margin_16"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10"
+        android:paddingTop="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_10"
+        android:text="社保啥时给我办好"/>
+    
+<!--     <TextView 
+        android:id="@+id/formadd_right_item_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_2"
+        android:paddingTop="@dimen/margin_3"
+        android:textColor="@color/text_color_weak"
+        android:textSize="@dimen/margin_14"
+        android:layout_below="@+id/formadd_right_item_tv"
+        android:text="fuck"/> -->
+    
+    <ImageView 
+        android:id="@+id/formadd_right_item_checked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin_16"
+        android:src="@drawable/ic_choose_gray_press"
+        android:visibility="gone"/>
+    
+    <CheckBox 
+        android:id="@+id/formadd_right_item_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:checked="false"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin_16"
+        style="@style/ChooseCheckboxTheme"/>
+    
+</RelativeLayout>

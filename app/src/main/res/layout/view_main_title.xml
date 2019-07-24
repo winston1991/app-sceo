@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/margin_48"
+    android:background="@color/title_color" >
+
+    <TextView 
+        android:id="@+id/main_title_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10"
+        android:textSize="@dimen/margin_18"
+        android:textColor="@color/white"
+        android:text="def"/>
+    
+    <RelativeLayout 
+        android:id="@+id/main_title_publish"
+        android:layout_width="@dimen/margin_48"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/bg_selector"
+        android:visibility="invisible">
+        
+	    <ImageView 
+	        android:id="@+id/main_title_publish_iv"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerInParent="true"
+	        android:src="@drawable/ic_affairs_publish"/>
+	    
+	    <ImageView 
+	        android:id="@+id/main_title_search_iv"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerInParent="true"
+	        android:src="@drawable/ic_affairs_query"
+	        android:visibility="gone"/>
+	    
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/main_title_query"
+        android:layout_width="@dimen/margin_48"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:layout_toLeftOf="@+id/main_title_publish"
+        android:background="@drawable/bg_selector"
+        android:visibility="invisible">
+        
+	    <ImageView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerInParent="true"
+	        android:src="@drawable/ic_query"/>
+        
+    </RelativeLayout>
+    
+</RelativeLayout>

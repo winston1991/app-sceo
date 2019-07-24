@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:background="@color/background_color">
+
+    <com.huntkey.software.sceo.widget.MainTitle
+        android:id="@+id/fform_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"/>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/fform_ptrListview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fform_title"
+        android:divider="@color/background_color"
+        android:dividerHeight="@dimen/margin_5"
+        android:fadingEdge="none"
+        android:cacheColorHint="#00000000"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true"
+        android:smoothScrollbar="true"/>
+
+    <com.huntkey.software.sceo.widget.ErrorView
+        android:id="@+id/fform_errorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/form_title"
+        app:ev_retryButtonText="@string/error_view_retry"
+        app:ev_retryButtonTextColor="@color/text_color_normal"
+        app:ev_subtitle="@string/error_view_title"/>
+
+    <include
+        android:id="@+id/fform_load"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/form_view1"
+        layout="@layout/view_loading"
+        android:visibility="gone"/>
+
+</RelativeLayout>

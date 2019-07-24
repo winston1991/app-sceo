@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView 
+        android:id="@+id/me_grid_item_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_16"
+        android:src="@drawable/ic_invoices"/>
+    
+    <TextView 
+        android:id="@+id/me_grid_item_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/me_grid_item_iv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_5"
+        android:textSize="@dimen/margin_15"
+        android:textColor="@color/text_color_normal"
+        android:text="待审单据"/>
+    
+    <ImageView
+        android:id="@+id/me_grid_item_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/me_grid_item_iv"
+        android:layout_marginRight="-1dp"
+        android:layout_marginTop="@dimen/margin_18"
+        android:background="@drawable/ic_remind_me"
+        android:gravity="center"
+        android:textSize="@dimen/margin_12"
+        android:textColor="@color/white"
+        android:visibility="visible"/>
+    
+</RelativeLayout>

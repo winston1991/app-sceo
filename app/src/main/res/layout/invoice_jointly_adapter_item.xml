@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/invoice_jointly_adapter_item_all"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_selector_w2g" >
+
+    <ImageView 
+        android:id="@+id/invoice_jointly_adapter_item_photo"
+        android:layout_width="@dimen/margin_48"
+        android:layout_height="@dimen/margin_48"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_marginBottom="@dimen/margin_5"
+        android:src="@drawable/ic_login_photo"/>
+    
+    <TextView 
+        android:id="@+id/invoice_jointly_adapter_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/invoice_jointly_adapter_item_photo"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:textSize="@dimen/margin_16"
+        android:textColor="@color/text_color_normal"
+        android:text="嘉源锐信"/>
+    
+    <TextView 
+        android:id="@+id/invoice_jointly_adapter_item_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/invoice_jointly_adapter_item_title"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_5"
+        android:textSize="@dimen/margin_14"
+        android:textColor="@color/text_color_weak"
+        android:text="15060006"
+        android:visibility="visible"/>
+    
+    <CheckBox 
+        android:id="@+id/invoice_jointly_adapter_item_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_16"
+        android:checked="false"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_alignParentRight="true"
+        style="@style/ChooseCheckboxTheme"/>
+    
+</RelativeLayout>

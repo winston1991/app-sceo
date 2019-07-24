@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout 
+        android:layout_width="@dimen/margin_140"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/pop_bg">
+        
+        <RelativeLayout 
+            android:id="@+id/query_pop_all"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_48"
+            android:background="@drawable/query_popwin">
+            
+	        <TextView 
+	            android:id="@+id/query_pop_all_tv"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+				android:gravity="center"
+	            android:layout_marginLeft="45dp"
+	            android:textSize="@dimen/margin_18"
+	            android:textColor="@color/white"
+	            android:text="全部"/>
+	        
+	        <ImageView 
+	            android:id="@+id/query_pop_all_iv"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="@dimen/margin_12"
+	            android:layout_centerVertical="true"
+	            android:layout_alignParentRight="true"
+	            android:src="@drawable/ic_pop_choose"
+	            android:visibility="gone"/>
+	        
+        </RelativeLayout>
+        
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/white"/>
+
+        <RelativeLayout 
+            android:id="@+id/query_pop_notclose"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_48"
+            android:background="@drawable/query_popwin">
+            
+	        <TextView 
+	            android:id="@+id/query_pop_notclose_tv"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+				android:gravity="center"
+	            android:layout_marginLeft="@dimen/margin_36"
+	            android:textSize="@dimen/margin_18"
+	            android:textColor="@color/white"
+	            android:text="未关闭"/>
+	        
+	        <ImageView 
+	            android:id="@+id/query_pop_notclose_iv"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="@dimen/margin_12"
+	            android:layout_centerVertical="true"
+	            android:layout_alignParentRight="true"
+	            android:src="@drawable/ic_pop_choose"
+	            android:visibility="gone"/>
+	        
+        </RelativeLayout>
+        
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/white"/>
+        
+        <RelativeLayout 
+            android:id="@+id/query_pop_close"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_48"
+            android:background="@drawable/query_popwin">
+            
+	        <TextView 
+	            android:id="@+id/query_pop_close_tv"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+				android:gravity="center"
+	            android:layout_marginLeft="@dimen/margin_36"
+	            android:textSize="@dimen/margin_18"
+	            android:textColor="@color/white"
+	            android:text="已关闭"/>
+	        
+	        <ImageView 
+	            android:id="@+id/query_pop_close_iv"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="@dimen/margin_12"
+	            android:layout_centerVertical="true"
+	            android:layout_alignParentRight="true"
+	            android:src="@drawable/ic_pop_choose"
+	            android:visibility="gone"/>
+	        
+        </RelativeLayout>
+        
+    </LinearLayout>
+    
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_color"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true" >
+
+    <com.huntkey.software.sceo.widget.CommonTitle
+        android:id="@+id/chat_name_setting_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"/>
+    
+    <com.huntkey.software.sceo.widget.ClearEditText
+        android:id="@+id/chat_name_setting_cEditText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_52"
+        android:layout_below="@+id/chat_name_setting_title"
+        android:layout_marginTop="@dimen/margin_16"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10"/>
+    
+</RelativeLayout>

@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white" >
+
+    <!-- <com.huntkey.software.sceo.widget.BackTitle
+        android:id="@+id/chart_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"/> -->
+    <RelativeLayout 
+        android:id="@+id/chart_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"
+        android:background="@color/title_color">
+        
+        <RelativeLayout 
+	        android:id="@+id/back_title_back"
+	        android:layout_width="@dimen/margin_52"
+	        android:layout_height="match_parent"
+	        android:background="@drawable/bg_selector">
+	        
+		    <ImageView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true"
+		        android:src="@drawable/ic_back"/>
+	        
+	    </RelativeLayout>
+	    
+	    <TextView 
+	        android:id="@+id/back_title_tv"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:paddingRight="@dimen/margin_10"
+	        android:layout_toRightOf="@+id/back_title_back"
+	        android:layout_toLeftOf="@+id/back_title_affair"
+	        android:gravity="center_vertical"
+	        android:singleLine="true"
+	        android:ellipsize="end"
+	        android:textSize="@dimen/margin_18"
+	        android:textColor="@color/white"
+	        android:text="详情"/>
+	    
+	    <RelativeLayout 
+	        android:id="@+id/back_title_affair"
+	        android:layout_width="@dimen/margin_52"
+	        android:layout_height="match_parent"
+	        android:layout_alignParentRight="true"
+	        android:background="@drawable/bg_selector">
+	        
+			<ImageView 
+			    android:id="@+id/back_title_affair_img"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true"
+		        android:src="@drawable/ic_affair"/>
+			
+			<ImageView 
+			    android:id="@+id/back_title_affair_config"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:src="@drawable/ic_remind_me"
+			    android:layout_toRightOf="@+id/back_title_affair_img"
+			    android:layout_marginTop="@dimen/margin_12"
+			    android:layout_marginLeft="-7dp"/>
+        
+    	</RelativeLayout>
+        
+    </RelativeLayout>
+    
+    <include 
+        android:id="@+id/chart_common_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chart_title"
+        layout="@layout/form_common_header"/>
+    
+<!--     <HorizontalScrollView 
+        android:id="@+id/chart_hsv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chart_common_header"
+        android:background="@color/background_color">
+        
+	    <com.huntkey.software.sceo.widget.materialrohling.SlidingTabLayout
+	        android:id="@+id/chart_sliding_tabs"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"/>
+    
+    </HorizontalScrollView> -->
+    <com.huntkey.software.sceo.widget.materialrohling.SlidingTabLayout
+        android:id="@+id/chart_sliding_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chart_common_header"
+       	android:background="@color/background_color"/>
+    
+    <com.huntkey.software.sceo.widget.NoSlideViewPage
+        android:id="@+id/chart_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/chart_sliding_tabs"/>
+    
+    <include 
+        android:id="@+id/chart_load"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/form_view1"
+        layout="@layout/view_loading"
+        android:visibility="gone"/>
+    
+</RelativeLayout>

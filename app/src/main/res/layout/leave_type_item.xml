@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_selector_w2g" >
+
+    <TextView 
+        android:id="@+id/leave_type_item_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_16"
+        android:textSize="@dimen/margin_16"
+        android:textColor="@color/text_color_normal"
+        android:text="事假"/>
+    
+    <!-- <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ico_make"/> -->
+    <CheckBox 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_centerVertical="true"
+        style="@style/ChooseCheckboxTheme"/>
+    
+</RelativeLayout>

@@ -1,0 +1,457 @@
+<com.huntkey.software.sceo.widget.RelativeLayoutAutoHintInputMethod xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_color"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true">
+
+    <com.huntkey.software.sceo.widget.BackTitle
+        android:id="@+id/invoice_details_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"/>
+    
+    <RelativeLayout 
+        android:id="@+id/invoice_details_layout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/invoice_details_title"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_8"
+	    android:paddingLeft="@dimen/margin_5"
+	    android:paddingRight="@dimen/margin_5"
+	    android:paddingBottom="@dimen/margin_10"
+	    android:background="@drawable/border_corners">
+        
+        <RelativeLayout 
+            android:id="@+id/invoice_details_layout_d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/margin_10"
+            android:paddingBottom="@dimen/margin_5"
+            android:background="@drawable/bg_selector_w2g">
+            
+            <TextView 
+	            android:id="@+id/invoice_details_number_tv"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textSize="@dimen/margin_16"
+	            android:textColor="@color/text_color_weak"
+                android:layout_centerVertical="true"
+	            android:text="申请单号："/>
+	        
+	        <TextView 
+	            android:id="@+id/invoice_details_number"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_toRightOf="@+id/invoice_details_number_tv"
+	            android:layout_marginLeft="@dimen/margin_23"
+	            android:textSize="@dimen/margin_16"
+	            android:textColor="@color/text_color_normal"
+                android:layout_centerVertical="true"
+	            android:text="HR13-12080095"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="明细"
+                android:textSize="@dimen/textsize_16"
+                android:textColor="@color/btn_red_normal"
+                android:layout_toLeftOf="@+id/invoice_details_arrow"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_1"/>
+	        
+	        <ImageView
+                android:id="@+id/invoice_details_arrow"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+	            android:src="@drawable/ic_arrow_right"/>
+            
+        </RelativeLayout>
+        
+        <View 
+            android:id="@+id/invoice_details_line1"
+            android:layout_below="@+id/invoice_details_layout_d"
+            style="@style/devide_line_horizontal"/>
+        
+        <TextView 
+            android:id="@+id/invoice_details_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/invoice_details_line1"
+            android:layout_marginTop="@dimen/margin_5"
+            android:textSize="@dimen/margin_16"
+            android:textColor="@color/text_color_weak"
+            android:text="表单名称："/>
+        
+        <TextView 
+            android:id="@+id/invoice_details_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/invoice_details_name_tv"
+            android:layout_marginLeft="@dimen/margin_23"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_below="@+id/invoice_details_line1"
+            android:textSize="@dimen/margin_16"
+            android:textColor="@color/text_color_normal"
+            android:text="请假申请单"/>
+        
+        <View 
+            android:id="@+id/invoice_details_line2"
+            android:layout_below="@+id/invoice_details_name_tv"
+            android:layout_marginTop="@dimen/margin_5"
+            style="@style/devide_line_horizontal"/>
+        
+        <TextView 
+            android:id="@+id/invoice_details_depart_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/invoice_details_line2"
+            android:layout_marginTop="@dimen/margin_5"
+            android:textSize="@dimen/margin_16"
+            android:textColor="@color/text_color_weak"
+            android:text="申请部门："/>
+        
+        <TextView 
+            android:id="@+id/invoice_details_depart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/invoice_details_line2"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_toRightOf="@+id/invoice_details_depart_tv"
+            android:layout_marginLeft="@dimen/margin_23"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="@dimen/margin_16"
+            android:textColor="@color/text_color_normal"
+            android:text="嘉源锐信软件系统部软件开发部"/>
+        
+        <View 
+            android:id="@+id/invoice_details_line3"
+            android:layout_below="@+id/invoice_details_depart_tv"
+            android:layout_marginTop="@dimen/margin_5"
+            style="@style/devide_line_horizontal"/>
+        
+        <TextView 
+            android:id="@+id/invoice_details_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_below="@+id/invoice_details_line3"
+            android:textSize="@dimen/margin_16"
+            android:textColor="@color/text_color_weak"
+            android:text="提交时间："/>
+        
+        <TextView 
+            android:id="@+id/invoice_details_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_below="@+id/invoice_details_line3"
+            android:layout_toRightOf="@+id/invoice_details_time_tv"
+            android:layout_marginLeft="@dimen/margin_23"
+            android:textSize="@dimen/margin_16"
+            android:textColor="@color/text_color_normal"
+            android:text="08-27 13:51"/>
+        
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:id="@+id/invoice_details_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+	    android:paddingRight="@dimen/margin_8"
+	    android:paddingTop="@dimen/margin_10"
+	    android:paddingBottom="@dimen/margin_10"
+	    android:orientation="horizontal">
+        
+        <Button 
+            android:id="@+id/invoice_details_btn_pass"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_36"
+            android:layout_marginLeft="@dimen/margin_8"
+            android:layout_weight="1"
+            android:background="@drawable/invoice_details_btn_pass"
+            android:textSize="@dimen/margin_18"
+            android:textColor="@color/white"
+            android:text="通过"
+            android:visibility="gone"/>
+        
+        <Button 
+            android:id="@+id/invoice_details_btn_jointly"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_36"
+            android:layout_marginLeft="@dimen/margin_8"
+            android:layout_weight="1"
+            android:background="@drawable/invoice_details_btn_other"
+            android:textSize="@dimen/margin_18"
+            android:textColor="@color/white"
+            android:text="联名"
+            android:visibility="gone"/>
+        
+        <Button 
+            android:id="@+id/invoice_details_btn_detail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_36"
+            android:layout_marginLeft="@dimen/margin_8"
+            android:layout_weight="1"
+            android:background="@drawable/invoice_details_btn_other"
+            android:textSize="@dimen/margin_18"
+            android:textColor="@color/white"
+            android:text="知会"
+            android:visibility="gone"/>
+        
+        <Button 
+            android:id="@+id/invoice_details_btn_return"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_36"
+            android:layout_marginLeft="@dimen/margin_8"
+            android:layout_weight="1"
+            android:background="@drawable/invoice_details_btn_return"
+            android:textSize="@dimen/margin_18"
+            android:textColor="@color/white"
+            android:text="退回"
+            android:visibility="gone"/>
+        
+        <Button 
+            android:id="@+id/invoice_details_btn_backout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_36"
+            android:layout_marginLeft="@dimen/margin_8"
+            android:layout_weight="1"
+            android:background="@drawable/invoice_details_btn_other"
+            android:textSize="@dimen/margin_18"
+            android:textColor="@color/white"
+            android:text="撤销"
+            android:visibility="gone"/>
+        
+    </LinearLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/invoice_details_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_8"
+		android:layout_marginRight="@dimen/margin_8"
+        android:layout_above="@+id/invoice_details_layout1"
+        android:layout_marginTop="@dimen/margin_8"
+        android:paddingLeft="@dimen/margin_5"
+	    android:paddingRight="@dimen/margin_5"
+	    android:paddingTop="@dimen/margin_2"
+	    android:paddingBottom="@dimen/margin_2"
+        android:background="@drawable/border_corners">
+        
+        <TextView
+            android:id="@+id/invoice_details_explain_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/margin_16"
+            android:textColor="@color/text_color_weak"
+            android:text="审核说明："/>
+
+        <EditText
+            android:id="@+id/invoice_details_explain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="100"
+            android:layout_toRightOf="@+id/invoice_details_explain_tv"
+            android:textColor="@color/text_color_normal"
+            android:textSize="@dimen/margin_16"
+            android:hint="请输入审核说明"/>
+            
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:id="@+id/invoice_details_layout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/invoice_details_layout2"
+        android:layout_marginLeft="@dimen/margin_8"
+		android:layout_marginRight="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_8"
+        android:paddingLeft="@dimen/margin_5"
+	    android:paddingRight="@dimen/margin_5"
+	    android:paddingTop="@dimen/margin_12"
+	    android:paddingBottom="@dimen/margin_12"
+        android:background="@drawable/btn_invoice_details"
+        android:orientation="horizontal">
+        
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/margin_1"
+            android:layout_weight="1">
+            
+            <TextView 
+                android:id="@+id/invoice_details_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/margin_14"
+                android:textColor="@color/text_color_weak"
+                android:text="申请:"/>
+            
+            <TextView 
+                android:id="@+id/invoice_details_n1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/invoice_details_tv1"
+                android:textSize="@dimen/margin_14"
+                android:textColor="@color/text_color_normal"
+                android:text="孟令长"/>
+            
+            <TextView 
+                android:id="@+id/invoice_details_c1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/invoice_details_n1"
+                android:textSize="@dimen/margin_10"
+                android:textColor="@color/text_color_blue"
+                android:text=""/>
+            
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/margin_1"
+            android:paddingRight="@dimen/margin_1"
+            android:layout_weight="1">
+            
+            <TextView 
+                android:id="@+id/invoice_details_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/margin_14"
+                android:textColor="@color/text_color_weak"
+                android:text="审核:"/>
+            
+            <TextView 
+                android:id="@+id/invoice_details_n2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/invoice_details_tv2"
+                android:textSize="@dimen/margin_14"
+                android:textColor="@color/text_color_weak"
+                android:text="符东宁"/>
+            
+            <TextView 
+                android:id="@+id/invoice_details_c2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/invoice_details_n2"
+                android:textSize="@dimen/margin_10"
+                android:textColor="@color/text_color_blue"
+                android:text=""/>
+            
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/margin_1"
+            android:paddingRight="@dimen/margin_1"
+            android:layout_weight="1">
+            
+            <TextView 
+                android:id="@+id/invoice_details_tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/margin_14"
+                android:textColor="@color/text_color_weak"
+                android:text="复核:"/>
+            
+            <TextView 
+                android:id="@+id/invoice_details_n3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/invoice_details_tv3"
+                android:textSize="@dimen/margin_14"
+                android:textColor="@color/text_color_weak"
+                android:text="符东宁"/>
+            
+            <TextView 
+                android:id="@+id/invoice_details_c3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/invoice_details_n3"
+                android:textSize="@dimen/margin_10"
+                android:textColor="@color/text_color_blue"
+                android:text=""/>
+            
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/margin_1"
+            android:layout_weight="1">
+            
+            <TextView 
+                android:id="@+id/invoice_details_tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/margin_14"
+                android:textColor="@color/text_color_weak"
+                android:text="批准:"/>
+            
+            <TextView 
+                android:id="@+id/invoice_details_n4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/invoice_details_tv4"
+                android:textSize="@dimen/margin_14"
+                android:textColor="@color/text_color_weak"
+                android:text="符东宁"/>
+            
+            <TextView 
+                android:id="@+id/invoice_details_c4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/invoice_details_n4"
+                android:textSize="@dimen/margin_10"
+                android:textColor="@color/text_color_blue"
+                android:text=""/>
+            
+        </RelativeLayout>
+        
+    </LinearLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8"
+        android:layout_below="@+id/invoice_details_layout3"
+        android:layout_above="@+id/invoice_details_layout4"
+        android:layout_marginTop="@dimen/margin_8"
+        android:paddingLeft="@dimen/margin_5"
+	    android:paddingRight="@dimen/margin_5"
+	    android:paddingTop="@dimen/margin_12"
+	    android:paddingBottom="@dimen/margin_12"
+        android:background="@drawable/border_corners">
+        
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            
+            <TextView 
+	            android:id="@+id/invoice_details_digest"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textSize="@dimen/margin_16"
+	            android:textColor="@color/text_color_normal"
+	            android:text="嘉源锐信软件系统部软件开发部，孟令长；申请年假 2012-08-25 08:28 - 2012-08-27 17:32 处理个人事情 共三天。"/>
+            
+        </ScrollView>
+        
+    </RelativeLayout>
+
+</com.huntkey.software.sceo.widget.RelativeLayoutAutoHintInputMethod>

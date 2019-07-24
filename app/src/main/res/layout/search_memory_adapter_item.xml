@@ -1,0 +1,16 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_selector_w2g" >
+
+    <TextView 
+        android:id="@+id/search_memory_adapter_item_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_9"
+        android:paddingBottom="@dimen/margin_9"
+        android:paddingLeft="@dimen/margin_16"
+        android:textSize="@dimen/margin_15"
+        android:textColor="@color/text_color_weak"/>
+    
+</RelativeLayout>

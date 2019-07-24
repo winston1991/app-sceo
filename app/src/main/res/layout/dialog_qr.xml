@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_corners" >
+
+	<RelativeLayout 
+	    android:id="@+id/me_fragment_qr"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerHorizontal="true">
+	    
+	    <ImageView 
+	        android:id="@+id/dialog_qr_iv1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_23"
+	        android:layout_marginRight="@dimen/margin_23"
+	        android:layout_marginTop="@dimen/margin_36"
+	        android:layout_marginBottom="@dimen/margin_30"
+	        android:layout_centerHorizontal="true"
+	        android:src="@drawable/ic_qr_logo"/>
+	    
+	    <ImageView 
+	        android:id="@+id/dialog_qr_iv2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_23"
+	        android:layout_marginRight="@dimen/margin_23"
+	        android:layout_below="@+id/dialog_qr_iv1"
+	        android:layout_centerInParent="true"
+	        android:src="@drawable/ic_qr_pic"/>
+	    
+	    <TextView 
+	        android:id="@+id/dialog_qr_tv1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="@dimen/margin_23"
+	        android:layout_marginBottom="@dimen/margin_23"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/dialog_qr_iv2"
+	        android:textSize="@dimen/margin_12"
+	        android:textColor="@color/text_color_normal"
+	        android:text="扫一扫，下载SCEO·ERP"/>
+	    
+	</RelativeLayout>
+    
+    <TextView 
+        android:id="@+id/dialog_qr_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_10"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/me_fragment_qr"
+        android:drawableLeft="@drawable/ic_download"
+        android:textSize="@dimen/margin_16"
+        android:textColor="@drawable/text_color_selector_b2b"
+        android:text="有新版本，点击更新"
+        android:visibility="visible"/>
+    
+</RelativeLayout>

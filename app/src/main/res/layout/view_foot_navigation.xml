@@ -1,0 +1,163 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@color/foot_navigation_background"
+    android:orientation="vertical" >
+
+    <View 
+        android:id="@+id/foot_navi_devide_line"
+        style="@style/devide_line_horizontal"/>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        
+        <RelativeLayout 
+	        android:id="@+id/navi_books"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:paddingBottom="@dimen/margin_3"
+	        android:paddingTop="@dimen/margin_3"
+	        android:layout_weight="1">
+	        
+	        <ImageView 
+	            android:id="@+id/navi_books_iv"
+	            android:layout_width="@dimen/margin_32"
+	            android:layout_height="@dimen/margin_32"
+	            android:layout_centerHorizontal="true"
+	            android:src="@drawable/btn_books"/>
+	        
+	        <TextView 
+	            android:id="@+id/navi_books_tv"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:layout_below="@+id/navi_books_iv"
+	            android:textSize="@dimen/margin_14"
+	            android:textColor="@color/text_color_weak"
+	            android:text="待审单据"/>
+	        
+	        <TextView 
+	            android:id="@+id/navi_books_remind"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="@dimen/margin_1"
+	            android:layout_alignRight="@+id/navi_books_iv"
+	            android:layout_marginRight="-8dp"
+	            android:textColor="@color/white"
+	            android:textSize="@dimen/margin_12"
+	            android:visibility="gone"
+	            android:gravity="center"
+	            android:background="@drawable/ic_remind_affairs"/>
+	        
+	    </RelativeLayout>
+	    
+        <RelativeLayout 
+	        android:id="@+id/navi_form"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:paddingBottom="@dimen/margin_3"
+	        android:paddingTop="@dimen/margin_3"
+	        android:layout_weight="1">
+	        
+	        <ImageView 
+	            android:id="@+id/navi_form_iv"
+	            android:layout_width="@dimen/margin_32"
+	            android:layout_height="@dimen/margin_32"
+	            android:layout_centerHorizontal="true"
+	            android:src="@drawable/btn_linkman"/>
+	        
+	        <TextView 
+	            android:id="@+id/navi_form_tv"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:layout_below="@+id/navi_form_iv"
+	            android:textSize="@dimen/margin_14"
+	            android:textColor="@color/text_color_weak"
+	            android:text="导航"/>
+	        
+	    </RelativeLayout>
+	    
+	    <RelativeLayout 
+	        android:id="@+id/navi_affairs"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:paddingBottom="@dimen/margin_3"
+	        android:paddingTop="@dimen/margin_3"
+	        android:layout_weight="1">
+	        
+	        <ImageView 
+	            android:id="@+id/navi_affairs_iv"
+	            android:layout_width="@dimen/margin_32"
+	            android:layout_height="@dimen/margin_32"
+	            android:layout_centerHorizontal="true"
+	            android:src="@drawable/btn_affairs"/>
+	        
+	        <TextView 
+	            android:id="@+id/navi_affairs_tv"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:layout_below="@+id/navi_affairs_iv"
+	            android:textSize="@dimen/margin_14"
+	            android:textColor="@color/text_color_weak"
+	            android:text="待办事务"/>
+	        
+	        <TextView 
+	            android:id="@+id/navi_affairs_remind"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="@dimen/margin_1"
+	            android:layout_alignRight="@+id/navi_affairs_iv"
+	            android:layout_marginRight="-8dp"
+	            android:textColor="@color/white"
+	            android:textSize="@dimen/margin_12"
+	            android:visibility="gone"
+	            android:gravity="center"
+	            android:background="@drawable/ic_remind_affairs"/>
+	        
+	    </RelativeLayout>
+	    
+	    <RelativeLayout 
+	        android:id="@+id/navi_me"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:paddingBottom="@dimen/margin_3"
+	        android:paddingTop="@dimen/margin_3"
+	        android:layout_weight="1">
+	        
+	        <ImageView 
+	            android:id="@+id/navi_me_iv"
+	            android:layout_width="@dimen/margin_32"
+	            android:layout_height="@dimen/margin_32"
+	            android:layout_centerHorizontal="true"
+	            android:src="@drawable/btn_me"/>
+	        
+	        <TextView 
+	            android:id="@+id/navi_me_tv"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:layout_below="@+id/navi_me_iv"
+	            android:textSize="@dimen/margin_14"
+	            android:textColor="@color/text_color_weak"
+	            android:text="我"/>
+	        
+	        <ImageView 
+	            android:id="@+id/navi_me_remind"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="@dimen/margin_1"
+	            android:visibility="gone"
+	            android:layout_alignRight="@+id/navi_me_iv"
+	            android:layout_marginRight="2dp"
+	            android:background="@drawable/ic_remind_me"/>
+	        
+	    </RelativeLayout>
+        
+    </LinearLayout>
+    
+</LinearLayout>

@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout 
+        android:id="@+id/chartC_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40"
+        android:background="@color/white">
+        
+        <TextView 
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="3"
+	        android:gravity="center"
+	        android:textSize="@dimen/margin_16"
+	        android:textColor="@color/text_color_normal"
+	        android:text="节点"/>
+        
+        <View 
+            android:layout_width="@dimen/margin_0.5"
+            android:layout_height="match_parent"
+            android:background="@color/background_color"/>
+        
+        <TextView 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textSize="@dimen/margin_16"
+            android:textColor="@color/text_color_normal"
+            android:text="日值"/>
+        
+        <View 
+            android:layout_width="@dimen/margin_0.5"
+            android:layout_height="match_parent"
+            android:background="@color/background_color"
+            android:visibility="gone"/>
+        
+        <TextView 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textSize="@dimen/margin_16"
+            android:textColor="@color/text_color_normal"
+            android:text="周值"
+            android:visibility="gone"/>
+        
+        <View 
+            android:layout_width="@dimen/margin_0.5"
+            android:layout_height="match_parent"
+            android:background="@color/background_color"/>
+        
+        <TextView 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textSize="@dimen/margin_16"
+            android:textColor="@color/text_color_normal"
+            android:text="月值"/>
+        
+        <View 
+            android:layout_width="@dimen/margin_0.5"
+            android:layout_height="match_parent"
+            android:background="@color/background_color"/>
+        
+        <TextView 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textSize="@dimen/margin_16"
+            android:textColor="@color/text_color_normal"
+            android:text="财年"/>
+        
+    </LinearLayout>
+    
+    <View 
+        android:id="@+id/chartC_list_view1"
+        android:layout_below="@+id/chartC_list_layout"
+        style="@style/devide_line_horizontal"/>
+    
+	<com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/chartC_list_ptrListview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/chartC_list_view1"
+        android:divider="@color/background_color"
+        android:dividerHeight="@dimen/margin_0.1"
+        android:fadingEdge="none"
+        android:cacheColorHint="#00000000"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true"
+        android:smoothScrollbar="true"/>
+	
+    <include 
+        android:id="@+id/chartC_list_load"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/view_loading"
+        android:visibility="gone"/>
+	    
+</RelativeLayout>

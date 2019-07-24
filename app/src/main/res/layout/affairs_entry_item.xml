@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/margin_8"
+    android:paddingBottom="@dimen/margin_8"
+    android:paddingLeft="@dimen/margin_10"
+    android:paddingRight="@dimen/margin_10"
+    android:background="@drawable/bg_selector_w2g" >
+
+    <ImageView 
+        android:id="@+id/affairs_item_iv"
+        android:layout_width="@dimen/margin_52"
+        android:layout_height="@dimen/margin_52"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_login_photo"/>
+    
+    <com.huntkey.software.sceo.widget.bitmaps2one.PuzzleView
+        android:id="@+id/affairs_item_puzzleview"
+        android:layout_width="@dimen/margin_52"
+        android:layout_height="@dimen/margin_52"
+        android:background="@color/avatar_background_color"
+        android:visibility="invisible"/>
+    
+    <TextView 
+        android:id="@+id/affairs_item_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/affairs_item_iv"
+        android:layout_marginLeft="-10dp"
+        android:gravity="center"
+        android:background="@drawable/ic_remind_affairs"
+        android:textSize="@dimen/margin_12"
+        android:textColor="@color/white"
+        android:text="6"
+        android:visibility="invisible"/>
+    
+    <TextView 
+        android:id="@+id/affairs_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/margin_3"
+        android:textSize="@dimen/margin_14"
+        android:textColor="@color/text_color_weak"
+        android:text="2015-07-01"/>
+    
+    <TextView 
+        android:id="@+id/affairs_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_3"
+        android:layout_toRightOf="@+id/affairs_item_iv"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:maxWidth="@dimen/margin_180"
+        android:textSize="@dimen/margin_18"
+        android:textColor="@color/text_color_normal"
+        android:text="符东宁"/>
+    
+    <TextView 
+        android:id="@+id/affairs_item_people"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_3"
+        android:layout_toRightOf="@+id/affairs_item_name"
+        android:layout_toLeftOf="@+id/affairs_item_time"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="@dimen/margin_18"
+        android:textColor="@color/text_color_normal"
+        android:text="(6)"/>
+    
+    <TextView 
+        android:id="@+id/affairs_item_lasttask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_toRightOf="@+id/affairs_item_iv"
+        android:layout_below="@+id/affairs_item_name"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="@dimen/margin_16"
+        android:textColor="@color/text_color_weak"
+        android:text="星期三记得升国旗"/>
+
+</RelativeLayout>

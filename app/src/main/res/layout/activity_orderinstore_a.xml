@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huntkey.software.sceo.widget.RelativeLayoutAutoHintInputMethod xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/ois_a_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"
+        android:background="@color/colorPrimary"/>
+
+    <LinearLayout
+        android:id="@+id/ois_a_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_23"
+        android:layout_below="@+id/ois_a_toolbar"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize_16"
+            android:textColor="@color/main_bottom_tab_textcolor_normal"
+            android:text="制令单号"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_7"
+            android:orientation="horizontal">
+
+            <com.huntkey.software.sceo.widget.ClearEditText
+                android:id="@+id/ois_a_sn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_empty"
+                android:padding="@dimen/margin_10"
+                android:hint="输入或者扫描制令单号"
+                android:textSize="@dimen/textsize_16"
+                android:textColor="@color/text_color_normal" />
+
+            <ImageView
+                android:id="@+id/ois_a_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_scan"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/ois_a_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40"
+        android:layout_marginTop="@dimen/margin_32"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_below="@+id/ois_a_layout1"
+        android:background="@drawable/login_btn"
+        android:text="下一步"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_18"/>
+
+</com.huntkey.software.sceo.widget.RelativeLayoutAutoHintInputMethod>

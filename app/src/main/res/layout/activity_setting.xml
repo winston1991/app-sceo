@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true" >
+    
+    <com.huntkey.software.sceo.widget.BackTitle
+        android:id="@+id/setting_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"/>
+
+    <ListView 
+        android:id="@+id/setting_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/setting_title"
+        android:scrollbars="none"
+        android:divider="@color/background_color"
+        android:dividerHeight="@dimen/margin_0.5"
+        android:layout_marginTop="@dimen/margin_16"/>
+    
+</RelativeLayout>

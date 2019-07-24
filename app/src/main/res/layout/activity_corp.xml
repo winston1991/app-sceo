@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFB">
+
+    <com.huntkey.software.sceo.widget.crop.CropImageView
+        android:id="@+id/cropImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="64dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="32dp"
+        custom:backgroundColor="#FFFFFB"
+        custom:cropMode="ratio_fit_image"
+        custom:frameColor="#86C166"
+        custom:frameStrokeWeight="1dp"
+        custom:guideColor="#AA86C166"
+        custom:guideShowMode="show_on_touch"
+        custom:guideStrokeWeight="1dp"
+        custom:handleColor="#86C166"
+        custom:handleShowMode="show_always"
+        custom:handleSize="8dp"
+        custom:minFrameSize="50dp"
+        custom:overlayColor="#AA1C1C1C"
+        custom:touchPadding="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cropImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonRotateImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_40"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#1C1C1C"
+            android:text="旋转"
+            android:textColor="#FFFFFB"
+            android:textSize="@dimen/textsize_16" />
+
+        <Button
+            android:id="@+id/buttonDone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_40"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#1C1C1C"
+            android:text="确认"
+            android:textColor="#FFFFFB"
+            android:textSize="@dimen/textsize_16" />
+
+    </LinearLayout>
+
+</RelativeLayout>
